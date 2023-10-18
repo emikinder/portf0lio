@@ -1,0 +1,42 @@
+---
+interface Props {
+    project: {
+        title: string;
+        subtitle: string;
+        description: string;
+        image: string;
+        link: string;
+        github: string;
+        techs: string[];
+    };
+}
+
+const { title, subtitle, description, image, link, github, techs } =
+    Astro.props.project;
+---
+
+<section class="w-full bg-[#3f37c9] rounded-lg">
+    <div class="w-3/5 p-5">
+        <h3 class="text-2xl">{title}</h3>
+        <p class="text-sm">{subtitle}</p>
+        <p class="text-lg">
+            {description}
+        </p>
+    </div>
+    <div class="w-2/5 p-5 flex flex-col justify-between gap-3">
+        <img
+            src={image}
+            alt={title}
+            class=""
+        />
+        {
+            techs && (
+                <section class="flex gap-2 justify-end">
+                    {techs.map((tech) => (
+                        <p>{tech}</p>
+                    ))}
+                </section>
+            )
+        }
+    </div>
+</section>
