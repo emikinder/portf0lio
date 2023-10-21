@@ -1,16 +1,15 @@
 ---
 import Presentation from "../components/Presentation.astro";
-import ProjectsList from "../components/ProjectsList.astro";
 import ProjectsPreview from "../components/ProjectsPreview.astro";
-import Techs from "../components/Techs.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="emikinder | dev">
-    <main class="w-full p-2 md:p-0 md:w-7/12 md:m-auto">
-        <Presentation />
-		<Techs />
-		<ProjectsPreview />
+    <main class="flex justify-center items-center">
+        <section class="p-3 md:p-0">
+            <Presentation />
+            <ProjectsPreview />
+        </section>
     </main>
 </Layout>
 
