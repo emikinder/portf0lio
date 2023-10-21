@@ -1,0 +1,38 @@
+---
+import PresentationDescription from "./PresentationDescription.astro";
+---
+
+<section class="flex flex-col md:flex-row justify-center gap-4">
+    <section class="flex flex-col">
+        <h1 class="text-8xl gradient-text">EMI KINDER</h1>
+        <PresentationDescription style="text-xl mx-1 hidden md:block" />
+        <section class="flex items-center mt-1 md:hidden">
+            <PresentationDescription style="text-xl mx-1" />
+            <img
+                src="/images/profile.jpg"
+                alt="emikinder"
+                width="140"
+                class="rounded-full"
+            />
+        </section>
+    </section>
+    <img
+        src="/images/profile.jpg"
+        alt="emikinder"
+        width="250"
+        class="m-auto rounded-full hidden md:block md:m-0"
+    />
+</section>
+
+<style>
+    h1 {
+        font-family: "PaytoneOne-Regular";
+    }
+
+    .gradient-text {
+        background: #f2c511;
+        background: linear-gradient(135deg, #f2c511, #f39c19);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+</style>

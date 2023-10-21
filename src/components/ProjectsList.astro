@@ -1,0 +1,51 @@
+---
+import ProjectItem from "./ProjectItem.astro";
+
+const projects = [
+    {
+        title: "Artssec",
+        subtitle: "Security company.",
+        description:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+        image: "images/artssec2.png",
+        link: "https://artssec.netlify.app/",
+        github: "https://artssec.netlify.app/",
+        techs: ["Gastby", "Contentful", "JS"],
+    },
+    {
+        title: "Artssec",
+        subtitle: "Security company.",
+        description:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+        image: "images/artssec2.png",
+        link: "https://artssec.netlify.app/",
+        github: "https://artssec.netlify.app/",
+        techs: ["Gastby", "Contentful", "JS"],
+    },
+    // {
+    //     title: "Artssec",
+    //     subtitle: "Security company.",
+    //     description:
+    //         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+    //     image: "images/artssec2.png",
+    //     link: "https://artssec.netlify.app/",
+    //     github: "https://artssec.netlify.app/",
+    //     techs: ["Gastby", "Contentful", "JS"],
+    // },
+    // {
+    //     title: "Artssec",
+    //     subtitle: "Security company.",
+    //     description:
+    //         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+    //     image: "images/artssec2.png",
+    //     link: "https://artssec.netlify.app/",
+    //     github: "https://artssec.netlify.app/",
+    //     techs: ["Gastby", "Contentful", "JS"],
+    // },
+];
+---
+
+<!-- <h2 class="font-bold text-2xl">MY PROJECTS</h2> -->
+<section class="w-full mx-auto grid grid-cols-2 gap-14">
+    {projects.map((project) => <ProjectItem project={project} />)}
+</section>

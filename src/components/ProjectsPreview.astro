@@ -1,0 +1,93 @@
+---
+
+---
+
+<section class="w-11/12 m-auto md:w-full h-[70vh] flex items-center">
+    <section
+        id="section-projects"
+        class="cursor-pointer shadow p-10 w-full mx-auto overflow-hidden rounded-md h-[60vh] hover:h-[58vh] hover:w-[96%] transition-all"
+    >
+        <section class="relative">
+            <span
+                id="title-1"
+                class="font-bold text-3xl"
+            >
+                Projects
+            </span>
+            <span
+                id="title-2"
+                class="font-bold text-3xl absolute left-0"
+            >
+                See all projects
+            </span>
+        </section>
+        <section class="-rotate-12 gap-5 w-[140%] flex flex-wrap">
+            <img
+                id="imgs-1"
+                src="images/projects.png"
+                class="transition-all duration-1000 ease-in-out"
+            />
+            <img
+                id="imgs-2"
+                src="images/projects.png"
+                class="rotate-180 transition-all duration-1000 ease-in-out"
+            />
+        </section>
+    </section>
+</section>
+<style>
+    .shadow {
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+    }
+
+    #title-1 {
+        /* display: block; */
+        visibility: visible;
+        opacity: 1;
+        transition: all 0.5s ease-in-out;
+    }
+
+    #title-2 {
+        /* display: none; */
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.5s ease-in-out;
+    }
+
+    #section-projects:hover #title-1 {
+        /* display: none; */
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    #section-projects:hover #title-2 {
+        /* display: block; */
+        visibility: visible;
+        opacity: 1;
+    }
+
+    #imgs-1 {
+        position: relative;
+        left: -8rem;
+    }
+
+    #imgs-2 {
+        position: relative;
+        left: 8rem;
+    }
+
+    #section-projects:hover #imgs-1 {
+        left: -13rem;
+    }
+
+    #section-projects:hover #imgs-2 {
+        left: 13rem;
+    }
+</style>
+<script>
+    document
+        .getElementById("section-projects")
+        .addEventListener("click", () => {
+            window.location.href = "/projects";
+        });
+</script>
