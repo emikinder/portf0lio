@@ -1,15 +1,17 @@
 ---
 import { Icon } from "astro-icon";
+import ThemeIcon from './ThemeIcon.astro';
 ---
 
 <nav class="navbar fixed w-full h-20 flex items-center">
     <section class="w-full md:w-6/12 m-auto flex justify-between px-3">
         <a
             href="/"
-            class="text-xl logo"
-            >{`<>`}</a
+            class="text-xl font-bold orange hover:text-white"
+            >{`<EK>`}</a
         >
         <div class="social flex">
+            <ThemeIcon />
             <a
                 href="https://www.linkedin.com/in/emiliano-kinderknecht/"
                 target="_blank"
@@ -29,25 +31,19 @@ import { Icon } from "astro-icon";
 </nav>
 <style>
     .navbar {
-        background-color: #0081cf;
+        background-color: #111111;
         z-index: 99;
     }
-    .gradient-text {
-        font-family: "PaytoneOne-Regular";
+
+    :global(.dark) .navbar {
+        background-color: #faf9f6;
+        z-index: 99;
     }
+
     .social > a {
         margin-left: 1rem;
     }
     a:hover > svg {
-        fill: #fff;
-    }
-
-    .logo {
-        color: #ffa82e;
-        font-weight: bold;
-    }
-
-    .logo:hover {
         fill: #fff;
     }
 </style>

@@ -7,7 +7,7 @@
         id="section-projects"
         class="h-[28rem] p-5 rounded-md overflow-hidden cursor-pointer shadow transition-all"
     >
-        <section class="relative text-3xl">
+        <section class="font-subtitle relative text-3xl">
             <span id="title-1">Projects</span>
             <span
                 id="title-2"
@@ -31,30 +31,23 @@
     </section>
 </section>
 <style>
-    .shadow {
-        box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
-    }
     #title-1 {
-        /* display: block; */
         visibility: visible;
         opacity: 1;
         transition: all 0.5s ease-in-out;
     }
     #title-2 {
-        /* display: none; */
         visibility: hidden;
         opacity: 0;
         transition: all 0.5s ease-in-out;
     }
 
     #section-projects:hover #title-1 {
-        /* display: none; */
         visibility: hidden;
         opacity: 0;
     }
 
     #section-projects:hover #title-2 {
-        /* display: block; */
         visibility: visible;
         opacity: 1;
     }

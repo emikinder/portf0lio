@@ -1,5 +1,6 @@
 ---
 import PresentationDescription from "./PresentationDescription.astro";
+import "@fontsource-variable/open-sans";
 ---
 
 <section class="flex flex-col md:flex-row justify-center gap-4">
@@ -26,12 +27,20 @@ import PresentationDescription from "./PresentationDescription.astro";
 
 <style>
     h1 {
-        font-family: "PaytoneOne-Regular";
+        font-family: "Open Sans Variable", sans-serif;
+        font-weight: 800;
     }
 
     .gradient-text {
-        background: #f2c511;
-        background: linear-gradient(135deg, #f2c511, #f39c19);
+        background: #ffffff;
+        background: linear-gradient(180deg, #ffffff, #131313);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    :global(.dark) .gradient-text {
+        background: #8e8e8d;
+        background: linear-gradient(180deg, #8e8e8d, #111111);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
