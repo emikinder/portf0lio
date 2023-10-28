@@ -8,35 +8,39 @@ interface Props {
         link: string;
         github: string;
         techs: string[];
+        color: string;
     };
 }
 
-const { title, subtitle, description, image, link, github, techs } =
+const { title, subtitle, description, image, link, github, techs, color } =
     Astro.props.project;
 ---
 
-<section class="w-full bg-[#3f37c9] rounded-lg">
+<section class=`shadow w-full flex rounded-lg text-white ${color}`>
     <div class="w-3/5 p-5">
         <h3 class="text-2xl">{title}</h3>
-        <p class="text-sm">{subtitle}</p>
-        <p class="text-lg">
+        <h4 class="text-sm">{subtitle}</h4>
+        <p class="text-md mt-1">
             {description}
         </p>
-    </div>
-    <div class="w-2/5 p-5 flex flex-col justify-between gap-3">
-        <img
-            src={image}
-            alt={title}
-            class=""
-        />
         {
             techs && (
-                <section class="flex gap-2 justify-end">
+                <section class="flex gap-3 mt-3">
                     {techs.map((tech) => (
-                        <p>{tech}</p>
+                        <div>{tech}</div>
                     ))}
                 </section>
             )
         }
     </div>
+    <div class="w-2/5 p-5 flex flex-col justify-between gap-3"></div>
 </section>
+<style>
+    h3,
+    h4 {
+        font-family: "Roboto", sans-serif;
+    }
+    p {
+        font-family: "Helvetica Neue", sans-serif;
+    }
+</style>

@@ -1,5 +1,6 @@
 ---
 import Navbar from "../components/Navbar.astro";
+import "@fontsource/roboto";
 interface Props {
     title: string;
 }
@@ -37,32 +38,51 @@ const { title } = Astro.props;
 </html>
 <style is:global>
     :root {
-        --accent: 136, 58, 234;
-        --accent-light: 224, 204, 250;
-        --accent-dark: 49, 10, 101;
-        --accent-gradient: linear-gradient(
-            45deg,
-            rgb(var(--accent)),
-            rgb(var(--accent-light)) 30%,
-            white 60%
+    }
+
+    html.dark {
+        /* background-color: #faf9f6; */
+        background: rgb(182, 182, 182);
+        background: linear-gradient(
+            342deg,
+            rgba(182, 182, 182, 1) 0%,
+            rgba(250, 249, 246, 1) 59%
+        );
+        color: #111111;
+    }
+
+    /* .dark .nav-links a {
+        color: #fff;
+    } */
+
+    html {
+        color: #faf9f6;
+        /* background-color: #111111; */
+        background: rgb(11, 11, 11);
+        background: linear-gradient(
+            342deg,
+            rgba(11, 11, 11, 1) 0%,
+            rgba(17, 17, 17, 1) 59%
         );
     }
-    html {
-        color: white;
-        background: #0081cf;
-        /* background: #0E1111; */
+
+    .shadow {
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
     }
-    @font-face {
-        font-family: "PaytoneOne-Regular";
-        src: url("/fonts/PaytoneOne-Regular.ttf") format("truetype");
-        font-weight: normal;
-        font-style: normal;
-        font-display: swap;
+
+    .orange {
+        color: #f39c19;
     }
 
     .center-class {
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+
+    .font-subtitle {
+        font-family: "Roboto", sans-serif;
+        font-size: 1.5rem;
+        font-weight: 400;
     }
 </style>

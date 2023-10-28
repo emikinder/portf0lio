@@ -1,17 +1,13 @@
 ---
+import ProjectsList from "../../components/ProjectsList.astro";
 import Layout from "../../layouts/Layout.astro";
 ---
 
 <Layout title="projects | emikinder">
-    <main class="flex justify-center items-center">
-        <section class="p-3 md:p-0">
-            <p>projects</p>
+    <main class="flex justify-center">
+        <section class="p-3 mt-20 md:mt-24 md:p-0 w-[55rem]">
+            <h1 class="font-subtitle text-2xl mb-5">Recent projects</h1>
+            <ProjectsList />
         </section>
     </main>
 </Layout>
-<style>
-    html {
-        color: white;
-        background: #0081cf;
-    }
-</style>
