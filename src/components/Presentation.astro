@@ -3,8 +3,8 @@ import PresentationDescription from "./PresentationDescription.astro";
 import "@fontsource-variable/open-sans";
 ---
 
-<section class="flex flex-col md:flex-row justify-center gap-4">
-    <section class="flex flex-col">
+<section class="flex flex-col md:flex-row justify-center items-center gap-4">
+    <section class="flex flex-col w-full md:w-[75%]">
         <h1 class="text-8xl gradient-text">EMI KINDER</h1>
         <PresentationDescription style="text-xl mx-1 hidden md:block" />
         <section class="flex items-center mt-1 md:hidden">
@@ -12,17 +12,19 @@ import "@fontsource-variable/open-sans";
             <img
                 src="/images/profile.jpg"
                 alt="emikinder"
-                width="140"
+                width="150"
                 class="rounded-full"
             />
         </section>
     </section>
-    <img
-        src="/images/profile.jpg"
-        alt="emikinder"
-        width="250"
-        class="m-auto rounded-full hidden md:block md:m-0"
-    />
+    <section class="md:w-[25%] hidden md:block md:m-0">
+        <img
+            src="/images/profile.jpg"
+            alt="emikinder"
+            width="220"
+            class="m-auto rounded-full"
+        />
+    </section>
 </section>
 
 <style>

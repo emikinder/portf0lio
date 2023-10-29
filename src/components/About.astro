@@ -1,0 +1,38 @@
+---
+import { Icon } from "astro-icon";
+---
+
+<section class="flex flex-col gap-4 my-10 rounded-md text-lg">
+    <hr />
+    <p>
+        I'm <b>passionate</b> about creating beautiful and functional user
+        interfaces that provide a great user experience.
+    </p>
+    <p>
+        In my free time, I enjoy learning about new frontend technologies, and
+        building web apps and sites. I also enjoy playing soccer, videogames and
+        spending time outdoors, drinking mate <b>obviously</b> 🧉.
+    </p>
+    <hr />
+</section>
+
+<style>
+    .about {
+        background: #222222;
+        color: #faf9f6;
+    }
+
+    :global(.dark) .about {
+        background: #faf9f6;
+        color: #222222;
+    }
+    p {
+        color: #757574;
+    }
+
+    hr {
+        background-color: #757574;
+        border: none;
+        height: 1px;
+    }
+</style>
