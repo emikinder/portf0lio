@@ -1,13 +1,15 @@
 ---
+import Layout from "../layouts/Layout.astro";
+import About from "../components/About.astro";
 import Presentation from "../components/Presentation.astro";
 import ProjectsPreview from "../components/ProjectsPreview.astro";
-import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="emikinder | dev">
-    <main class="flex justify-center h-[200vh]">
-        <section class="p-3 mt-16 md:mt-24 md:p-0">
+    <main class="flex justify-center mx-auto md:w-7/12 h-[200vh]">
+        <section class="mt-16 md:mt-24 p-3 md:p-0">
             <Presentation />
+            <About />
             <ProjectsPreview />
         </section>
     </main>
