@@ -7,18 +7,13 @@ const { style } = Astro.props;
 ---
 
 <p class={style}>
-    Hi! My name is Emiliano, I'm a <strong class="orange"
+    <!-- Hi! My name is Emiliano, I'm a <strong class="orange-text"
         >frontend developer</strong
-    > based on Italy 👽
+    > based on Italy 👽 -->
+    <strong class="orange-text">frontend developer</strong>
 </p>
 <style>
     p {
-        font-family: "Roboto", sans-serif;
         color: #757574;
-    }
-
-    :global(.dark) p {
-        font-family: "Roboto", sans-serif;
-        color: #111111;
     }
 </style>

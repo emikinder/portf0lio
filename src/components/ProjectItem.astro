@@ -1,4 +1,5 @@
 ---
+import Chip from "./Chip.astro";
 interface Props {
     project: {
         title: string;
@@ -16,31 +17,24 @@ const { title, subtitle, description, image, link, github, techs, color } =
     Astro.props.project;
 ---
 
-<section class=`shadow w-full flex rounded-lg text-white ${color}`>
+<section class=`shadow rounded-lg text-white cursor-pointer ${color}`>
     <div class="w-3/5 p-5">
-        <h3 class="text-2xl">{title}</h3>
-        <h4 class="text-sm">{subtitle}</h4>
-        <p class="text-md mt-1">
+        <h3 class="text-2xl font-subtitle">{title}</h3>
+        <h4 class="text-sm font-text">{subtitle}</h4>
+        <p class="text-md mt-1 font-text">
             {description}
         </p>
         {
             techs && (
                 <section class="flex gap-3 mt-3">
                     {techs.map((tech) => (
-                        <div>{tech}</div>
+                        <Chip tech={tech} />
                     ))}
                 </section>
             )
         }
     </div>
-    <div class="w-2/5 p-5 flex flex-col justify-between gap-3"></div>
+    <!-- <div class="w-2/5 p-5 flex flex-col justify-between gap-3"></div> -->
 </section>
 <style>
-    h3,
-    h4 {
-        font-family: "Roboto", sans-serif;
-    }
-    p {
-        font-family: "Helvetica Neue", sans-serif;
-    }
 </style>

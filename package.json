@@ -13,6 +13,7 @@
     "@astrojs/tailwind": "^5.0.2",
     "@astrojs/vercel": "^5.0.2",
     "@fontsource-variable/open-sans": "^5.0.18",
+    "@fontsource-variable/rubik": "^5.0.19",
     "@fontsource/roboto": "^5.0.8",
     "astro": "^3.3.2",
     "astro-icon": "^0.8.1",

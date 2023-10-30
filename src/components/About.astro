@@ -1,8 +1,10 @@
 ---
-import { Icon } from "astro-icon";
+
 ---
 
-<section class="flex flex-col gap-4 my-10 rounded-md text-lg">
+<section
+    class="font-text flex flex-col gap-4 my-10 text-lg font-text text-center px-0 md:px-28"
+>
     <hr />
     <p>
         I'm <b>passionate</b> about creating beautiful and functional user
@@ -10,10 +12,19 @@ import { Icon } from "astro-icon";
     </p>
     <p>
         In my free time, I enjoy learning about new frontend technologies, and
-        building web apps and sites. I also enjoy playing soccer, videogames and
-        spending time outdoors, drinking mate <b>obviously</b> 🧉.
+        building web apps and sites. I also enjoy playing <i>fútbol</i>, videogames and
+        spending time outdoors, drinking mate <b>obviously</b> 🧉🇦🇷.
     </p>
+    <!-- <img
+        src="/images/profile.jpg"
+        alt="emikinder"
+        width="180"
+        class="m-auto rounded-full"
+    /> -->
     <hr />
+    <p class="font-title pixel text-center text-4xl mt-10">
+        Pixel perfect. Responsive design.
+    </p>
 </section>
 
 <style>
@@ -21,18 +32,20 @@ import { Icon } from "astro-icon";
         background: #222222;
         color: #faf9f6;
     }
-
-    :global(.dark) .about {
-        background: #faf9f6;
-        color: #222222;
+    .pixel {
+        font-weight: 800;
+        color: #faf9f6;
     }
+
     p {
-        color: #757574;
+        color: #faf9f6;
     }
 
     hr {
         background-color: #757574;
         border: none;
         height: 1px;
+        width: 60%;
+        align-self: center;
     }
 </style>
