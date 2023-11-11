@@ -8,7 +8,7 @@
 
 
 ```bash
-$ git clone https://github.com/emikinder/p0rtfolio.git
+$ git clone https://github.com/emikinder/portf0lio.git
 $ cd p0rtfolio
 $ npm install
 $ npm run dev
