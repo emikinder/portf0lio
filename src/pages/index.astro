@@ -1,11 +1,40 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import About from "../components/About.astro";
+import Presentation from "../components/Presentation.astro";
+import ProjectsPreview from "../components/ProjectsPreview.astro";
 ---
 
 <Layout title="emikinder | dev">
-	<main>
-	</main>
+    <main class="flex justify-center mx-auto">
+        <section class="mt-20 md:mt-36 p-3 md:p-0">
+            <Presentation />
+            <About />
+            <ProjectsPreview />
+        </section>
+    </main>
 </Layout>
 
 <style>
+    main {
+        width: 100%;
+    }
+
+    @media (min-width: 768px) {
+        main {
+            width: 85%;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        main {
+            width: 75%;
+        }
+    }
+
+    @media (min-width: 1200px) {
+        main {
+            width: 65%;
+        }
+    }
 </style>

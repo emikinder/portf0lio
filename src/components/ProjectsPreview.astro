@@ -1,0 +1,98 @@
+---
+
+---
+
+<section class="w-full flex justify-center md:p-10">
+    <section
+        id="section-projects"
+        class="h-[28rem] p-5 rounded-md overflow-hidden cursor-pointer shadow transition-all"
+    >
+        <section class="font-title title-preview relative text-2xl">
+            <span id="title-1">Projects</span>
+            <span
+                id="title-2"
+                class="absolute left-0"
+            >
+                See all projects
+            </span>
+        </section>
+        <section class="-rotate-12 mt-6 md:mt-0">
+            <img
+                id="imgs-1"
+                src="images/projects.png"
+                class="imgs transition-all duration-1000 ease-in-out"
+            />
+            <img
+                id="imgs-2"
+                src="images/projects.png"
+                class="imgs transition-all duration-1000 ease-in-out"
+            />
+        </section>
+    </section>
+</section>
+<style>
+    #title-1 {
+        visibility: visible;
+        opacity: 1;
+        transition: all 0.5s ease-in-out;
+    }
+    #title-2 {
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .title-preview {
+        font-weight: 800;
+        color: #faf9f6;
+    }
+
+    #section-projects:hover #title-1 {
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    #section-projects:hover #title-2 {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    #section-projects {
+        max-width: 55rem;
+    }
+
+    .imgs {
+        max-width: 150%;
+        position: relative;
+    }
+
+    @media screen and (max-width: 768px) {
+        .imgs {
+            max-width: 240%;
+        }
+    }
+
+    #imgs-1 {
+        margin-bottom: 1rem;
+        margin-left: -5rem;
+    }
+
+    #imgs-2 {
+        margin-left: -10rem;
+    }
+
+    #section-projects:hover #imgs-1 {
+        margin-left: -10rem;
+    }
+
+    #section-projects:hover #imgs-2 {
+        margin-left: 0rem;
+    }
+</style>
+<script>
+    document
+        .getElementById("section-projects")
+        .addEventListener("click", () => {
+            window.location.href = "/projects";
+        });
+</script>

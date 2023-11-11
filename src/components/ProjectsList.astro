@@ -1,0 +1,55 @@
+---
+import ProjectItem from "./ProjectItem.astro";
+
+const projects = [
+    {
+        title: "Sares",
+        subtitle: "Digital art.",
+        description:
+            "NFT art gallery website for a digital artist. Minimalist. Clean. Simple.",
+        link: "https://artssec.netlify.app/",
+        techs: ["Astro", "React", "Contentful"],
+        color: "bg-[#0a0a0a] border border-[#faf9f6]",
+    },
+    {
+        title: "Artssec",
+        subtitle: "Security company.",
+        description: "Webpage.",
+        link: "https://artssec.netlify.app/",
+        techs: ["Gastby", "Contentful", "GraphQL"],
+        color: "bg-[#00a550]",
+    },
+    {
+        title: "TicketVibe",
+        subtitle: "Tickets for events.",
+        description:
+            "Website simulation. Find and buy tickets for your favorite events.",
+        link: "https://ticketvibe-emk.vercel.app/",
+        github: "https://github.com/emikinder/ticketvibe",
+        techs: ["React", "Vite", "TailwindCSS"],
+        color: "bg-[#6622cc]",
+    },
+    {
+        title: "iVascular",
+        subtitle: "Medical devices and therapies.",
+        description:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+        techs: ["React", "Typescript", "Bootstrap"],
+        color: "bg-[#bb8bc5] text-black",
+    },
+    {
+        title: "Portf0lio",
+        subtitle: "Personal portfolio.",
+        description:
+            "Just this portfolio, made with Astro, TailwindCSS, and a lot of love.",
+        techs: ["Astro", "TailwindCSS"],
+        github: "https://github.com/emikinder/p0rtfolio",
+        // link: "",
+        color: "bg-[#f39c19]",
+    },
+];
+---
+
+<section class="my-10 w-full grid md:grid-cols-2 gap-4">
+    {projects.map((project) => <ProjectItem project={project} />)}
+</section>

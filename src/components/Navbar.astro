@@ -1,0 +1,50 @@
+---
+import { Icon } from "astro-icon";
+---
+
+<nav class="navbar fixed w-full h-16 flex items-center">
+    <section class="navbar-content w-full m-auto flex justify-between px-3">
+        <a
+            href="/"
+            class="logo font-title text-xl font-bold orange-text"
+            >ek</a
+        >
+        <div class="social flex">
+            <a
+                href="https://www.linkedin.com/in/emiliano-kinderknecht/"
+                target="_blank"
+                class="w-[25px]"
+            >
+                <Icon name="linkedin" />
+            </a>
+            <a
+                href="https://www.github.com/emikinder/"
+                target="_blank"
+                class="w-[28px]"
+            >
+                <Icon name="github" />
+            </a>
+        </div>
+    </section>
+</nav>
+<style>
+    .navbar {
+        background-color: #000;
+        z-index: 99;
+    }
+
+    .social > a {
+        margin-left: 1rem;
+    }
+    a:hover > svg {
+        fill: #faf9f6;
+    }
+
+    .logo:hover {
+        color: #faf9f6;
+    }
+
+    .navbar-content {
+        max-width: 1300px;
+    }
+</style>
