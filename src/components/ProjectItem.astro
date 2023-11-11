@@ -5,25 +5,26 @@ interface Props {
         title: string;
         subtitle: string;
         description: string;
-        image: string;
-        link: string;
-        github: string;
+        link?: string;
+        github?: string;
         techs: string[];
         color: string;
     };
 }
 
-const { title, subtitle, description, image, link, github, techs, color } =
+const { title, subtitle, description, link, github, techs, color } =
     Astro.props.project;
 ---
 
-<section class=`shadow rounded-lg text-white cursor-pointer ${color}`>
-    <div class="w-3/5 p-5">
-        <h3 class="text-2xl font-subtitle">{title}</h3>
-        <h4 class="text-sm font-text">{subtitle}</h4>
-        <p class="text-md mt-1 font-text">
-            {description}
-        </p>
+<section class=`shadow flex rounded-lg text-white ${color}`>
+    <div class="w-3/5 p-4 flex flex-col justify-between">
+        <div>
+            <h3 class="text-2xl font-subtitle">{title}</h3>
+            <h4 class="text-sm font-text">{subtitle}</h4>
+            <p class="text-md mt-1 font-text">
+                {description}
+            </p>
+        </div>
         {
             techs && (
                 <section class="flex gap-3 mt-3">
@@ -34,7 +35,36 @@ const { title, subtitle, description, image, link, github, techs, color } =
             )
         }
     </div>
-    <!-- <div class="w-2/5 p-5 flex flex-col justify-between gap-3"></div> -->
+    <div class="w-2/5 p-4 flex justify-end items-end gap-3">
+        {
+            github && (
+                <a
+                    href={github}
+                    target="_blank"
+                    class="text-sm font-text hover:underline"
+                >
+                    Github
+                </a>
+            )
+        }
+        {
+            link ? (
+                <a
+                    href={link}
+                    target="_blank"
+                    class="text-sm font-text hover:underline"
+                >
+                    View site
+                </a>
+            ) : (
+                <a
+                    href={`projects/${title.toLowerCase()}`}
+                    class="text-sm font-text hover:underline"
+                >
+                    View project
+                </a>
+            )
+        }
+    </div>
 </section>
-<style>
-</style>
+<style></style>

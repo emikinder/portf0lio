@@ -44,16 +44,11 @@ const { title } = Astro.props;
 </html>
 <style is:global>
     :root {
+        color-scheme: dark;
     }
     html {
         color: #757574;
-        background: rgb(11, 11, 11);
-        background: linear-gradient(
-            170deg,
-            rgb(17, 17, 17, 1) 0%,
-            rgba(0,0,0) 59%
-        );
-        /* background: radial-gradient(circle at 10.1% 100.8%, rgb(31, 31, 31) 0%, rgb(0, 0, 0) 99.4%); */
+        background-color: #000;
     }
 
     .shadow {
@@ -79,6 +74,6 @@ const { title } = Astro.props;
     }
 
     .font-text {
-        font-family: 'Rubik Variable', sans-serif;
+        font-family: "Rubik Variable", sans-serif;
     }
 </style>
