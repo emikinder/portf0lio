@@ -1,48 +1,30 @@
 ---
-import PresentationDescription from "./PresentationDescription.astro";
-import "@fontsource-variable/open-sans";
+
 ---
 
-<section class="flex flex-col md:flex-row justify-center items-center gap-4">
-    <section class="flex flex-col w-full md:w-[75%]">
-        <h1 class="text-8xl gradient-text">EMI KINDER</h1>
-        <PresentationDescription style="text-xl mx-1 hidden md:block" />
-        <section class="flex items-center mt-1 md:hidden">
-            <PresentationDescription style="text-xl mx-1" />
-            <img
-                src="/images/profile.jpg"
-                alt="emikinder"
-                width="150"
-                class="rounded-full"
-            />
-        </section>
-    </section>
-    <section class="md:w-[25%] hidden md:block md:m-0">
-        <img
-            src="/images/profile.jpg"
-            alt="emikinder"
-            width="220"
-            class="m-auto rounded-full"
-        />
-    </section>
+<section class="font-title flex flex-col items-center mx-auto">
+    <h1 class="name">Hey! I'm Emi Kinderknecht, frontend developer.</h1>
+    <!-- <p>Hi! My name is Emiliano, I'm a</p> -->
+    <!-- <strong class="orange-text text-3xl mx-1">frontend developer</strong> -->
+    <!-- <p>based on Italy 👽</p> -->
 </section>
 
 <style>
-    h1 {
-        font-family: "Open Sans Variable", sans-serif;
-        font-weight: 800;
+    .name {
+        font-weight: 700;
+        font-size: 3rem;
+        color: #faf9f6;
+    }
+
+    @media (min-width: 768px) {
+        .name {
+            font-size: 5rem;
+        }
     }
 
     .gradient-text {
-        background: #ffffff;
-        background: linear-gradient(180deg, #ffffff, #131313);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-    :global(.dark) .gradient-text {
-        background: #8e8e8d;
-        background: linear-gradient(180deg, #8e8e8d, #111111);
+        background: #faf9f6;
+        background: linear-gradient(180deg, #faf9f6, #8e8e8d);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }

@@ -1,38 +1,75 @@
 ---
-import { Icon } from "astro-icon";
+
 ---
 
-<section class="flex flex-col gap-4 my-10 rounded-md text-lg">
-    <hr />
-    <p>
-        I'm <b>passionate</b> about creating beautiful and functional user
-        interfaces that provide a great user experience.
-    </p>
-    <p>
-        In my free time, I enjoy learning about new frontend technologies, and
-        building web apps and sites. I also enjoy playing soccer, videogames and
-        spending time outdoors, drinking mate <b>obviously</b> 🧉.
-    </p>
-    <hr />
+<section
+    class="font-subtitle flex flex-col gap-3 my-3 md:my-10 text-lg text-center"
+>
+    <section class="text-left grid md:grid-cols-2 gap-5">
+        <div class="about w-full md:pr-10 my-auto">
+            <p>
+                I'm <strong>passionate</strong> about creating beautiful and
+                functional user interfaces that provide a great user experience.
+            </p>
+            <br />
+            <p>
+                I've been working in web development for <strong
+                    >+6 years</strong
+                >. Going through companies from different sectors and
+                technologies. Now my focus is on javascript and its frameworks,
+                like <strong>React</strong>, <strong>Next.js</strong> and <strong
+                    >Astro</strong
+                >.
+            </p>
+            <br />
+            <p>
+                In my free time, I enjoy learning about new frontend
+                technologies, and building web apps and sites. I also enjoy
+                playing <i>fútbol</i>, videogames and spending time outdoors,
+                drinking mate <strong>obviously</strong> 🧉🇦🇷.
+            </p>
+        </div>
+
+        <img
+            src="/images/profile4.jpeg"
+            alt="emikinder"
+            width="400"
+            class="m-auto rounded-2xl hidden md:block"
+        />
+        <img
+            src="/images/profile4-m.jpeg"
+            alt="emikinder"
+            width="400"
+            class="m-auto rounded-2xl block md:hidden"
+        />
+    </section>
 </section>
+<p class="font-title pixel text-center text-3xl my-10 md:text-6xl md:my-20">
+    Pixel perfect. Responsive design.
+</p>
 
 <style>
-    .about {
-        background: #222222;
+    .pixel {
+        font-weight: 800;
         color: #faf9f6;
     }
 
-    :global(.dark) .about {
-        background: #faf9f6;
-        color: #222222;
-    }
-    p {
-        color: #757574;
+    .about p {
+        color: #aaaaaa;
+        font-size: 1.5rem;
+        line-height: 2.2rem;
+        font-weight: 500;
     }
 
-    hr {
-        background-color: #757574;
-        border: none;
-        height: 1px;
+    @media screen and (max-width: 768px) {
+        .about p {
+            font-size: 1.1rem;
+            line-height: 1.7rem;
+        }
+    }
+
+    i,
+    strong {
+        color: #faf9f6;
     }
 </style>
