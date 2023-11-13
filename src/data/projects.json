@@ -6,7 +6,7 @@
             "description": "NFT art gallery website for a digital artist. Minimalist. Clean. Simple.",
             "link": "https://artssec.netlify.app/",
             "techs": ["Astro", "React", "Contentful"],
-            "color": "bg-[#0a0a0a] border border-[#faf9f6]"
+            "color": 1
         },
         {
             "title": "Artssec",
@@ -14,7 +14,7 @@
             "description": "Webpage.",
             "link": "https://artssec.netlify.app/",
             "techs": ["Gastby", "Contentful", "GraphQL"],
-            "color": "bg-[#00a550]"
+            "color": 2
         },
         {
             "title": "TicketVibe",
@@ -23,14 +23,14 @@
             "link": "https://ticketvibe-emk.vercel.app/",
             "github": "https://github.com/emikinder/ticketvibe",
             "techs": ["React", "Vite", "TailwindCSS"],
-            "color": "bg-[#6622cc]"
+            "color": 3
         },
         {
             "title": "iVascular",
             "subtitle": "Medical devices and therapies.",
             "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
             "techs": ["React", "Typescript", "Bootstrap"],
-            "color": "bg-[#bb8bc5] text-black"
+            "color": 4
         },
         {
             "title": "Portf0lio",
@@ -38,7 +38,7 @@
             "description": "Just this portfolio, made with Astro, TailwindCSS, and a lot of love.",
             "techs": ["Astro", "TailwindCSS"],
             "github": "https://github.com/emikinder/portf0lio",
-            "color": "bg-[#f39c19]"
+            "color": 5
         }
     ]
 }

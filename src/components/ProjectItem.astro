@@ -9,16 +9,25 @@ interface Props {
         link?: string;
         github?: string;
         techs: string[];
-        color: string;
+        color: number;
     };
 }
 
+const colors = {
+    1: "bg-[#0a0a0a] border border-[#faf9f6]",
+    2: "bg-[#00a550]",
+    3: "bg-[#6622cc]",
+    4: "bg-[#bb8bc5] text-black",
+    5: "bg-[#f39c19]",
+};
+
 const { title, subtitle, description, link, github, techs, color } =
     Astro.props.project;
-const clases = color + " ";
 ---
 
-<section class=`shadow flex rounded-lg text-white overflow-hidden ${clases}`>
+<section
+    class=`shadow flex rounded-lg text-white overflow-hidden ${colors[color]}`
+>
     <div class="w-3/5 p-4 flex flex-col justify-between">
         <div>
             <h3 class="text-2xl font-subtitle">{title}</h3>
