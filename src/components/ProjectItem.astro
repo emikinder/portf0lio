@@ -1,5 +1,6 @@
 ---
 import Chip from "./Chip.astro";
+import { Slide } from "react-awesome-reveal";
 interface Props {
     project: {
         title: string;
@@ -14,9 +15,10 @@ interface Props {
 
 const { title, subtitle, description, link, github, techs, color } =
     Astro.props.project;
+const clases = color + " ";
 ---
 
-<section class=`shadow flex rounded-lg text-white ${color}`>
+<section class=`shadow flex rounded-lg text-white overflow-hidden ${clases}`>
     <div class="w-3/5 p-4 flex flex-col justify-between">
         <div>
             <h3 class="text-2xl font-subtitle">{title}</h3>
@@ -27,7 +29,7 @@ const { title, subtitle, description, link, github, techs, color } =
         </div>
         {
             techs && (
-                <section class="flex gap-3 mt-3">
+                <section class="flex gap-1 md:gap-3 mt-3">
                     {techs.map((tech) => (
                         <Chip tech={tech} />
                     ))}
@@ -36,35 +38,43 @@ const { title, subtitle, description, link, github, techs, color } =
         }
     </div>
     <div class="w-2/5 p-4 flex justify-end items-end gap-3">
-        {
-            github && (
-                <a
-                    href={github}
-                    target="_blank"
-                    class="text-sm font-text hover:underline"
-                >
-                    Github
-                </a>
-            )
-        }
-        {
-            link ? (
-                <a
-                    href={link}
-                    target="_blank"
-                    class="text-sm font-text hover:underline"
-                >
-                    View site
-                </a>
-            ) : (
-                <a
-                    href={`projects/${title.toLowerCase()}`}
-                    class="text-sm font-text hover:underline"
-                >
-                    View project
-                </a>
-            )
-        }
+        <Slide
+            triggerOnce
+            direction="right"
+            client:load
+        >
+            <div class="flex flex-col">
+                {
+                    github && (
+                        <a
+                            href={github}
+                            target="_blank"
+                            class="text-sm font-text hover:underline"
+                        >
+                            Github
+                        </a>
+                    )
+                }
+                {
+                    link ? (
+                        <a
+                            href={link}
+                            target="_blank"
+                            class="text-sm font-text hover:underline"
+                        >
+                            View site
+                        </a>
+                    ) : (
+                        <a
+                            href={`projects/${title.toLowerCase()}`}
+                            class="text-sm font-text hover:underline"
+                        >
+                            View project
+                        </a>
+                    )
+                }
+            </div>
+        </Slide>
     </div>
 </section>
 <style></style>
