@@ -2,23 +2,40 @@
 
 ---
 
-<section class="font-title flex flex-col items-center mx-auto">
-    <h1 class="name">Hey! I'm Emi Kinderknecht, frontend developer.</h1>
-    <!-- <p>Hi! My name is Emiliano, I'm a</p> -->
-    <!-- <strong class="orange-text text-3xl mx-1">frontend developer</strong> -->
-    <!-- <p>based on Italy 👽</p> -->
+<section class="font-title flex flex-col mx-auto">
+    <h1 class="name text-center">
+        Hey! I'm Emi Kinderknecht,<br /> frontend developer.
+    </h1>
 </section>
 
 <style>
     .name {
         font-weight: 700;
-        font-size: 3rem;
+        line-height: normal;
         color: #faf9f6;
     }
 
-    @media (min-width: 768px) {
+    @media (max-width: 480px) {
         .name {
-            font-size: 5rem;
+            font-size: 12vw;
+        }
+    }
+
+    @media (min-width: 481px) and (max-width: 768px) {
+        .name {
+            font-size: 9vw;
+        }
+    }
+
+    @media (min-width: 769px) and (max-width: 1024px) {
+        .name {
+            font-size: 5.5rem;
+        }
+    }
+
+    @media (min-width: 1025px) {
+        .name {
+            font-size: 4rem;
         }
     }
 

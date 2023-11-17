@@ -1,0 +1,156 @@
+---
+import Chip from "../../components/Chip.astro";
+import Layout from "../../layouts/Layout.astro";
+import { Fade } from "react-awesome-reveal";
+
+import { projects } from "../../data/projects.json";
+const project = projects.find((project) => project.title === "iVascular");
+---
+
+<Layout title="iVascular | emikinder">
+    <main class="flex justify-center mx-auto overflow-hidden">
+        <section class="mt-20 md:mt-36 p-3 md:p-0">
+            <Fade
+                triggerOnce
+                client:load
+            >
+                <h1 class="font-title text-left text-5xl">{project.title}</h1>
+                <p class="font-subtitle text-left text-xl w-[70%]">
+                    {project.description}
+                </p>
+                <div class="flex gap-2 my-3">
+                    {project.techs.map((tech) => <Chip tech={tech} />)}
+                </div>
+            </Fade>
+            <section class="flex flex-col mt-10">
+                <section
+                    class="flex justify-between flex-col md:flex-row mb-10"
+                >
+                    <div
+                        class="w-full md:w-2/5 md:p-3 flex flex-col justify-between text-xl"
+                    >
+                        <div class="md:px-4 mb-4">
+                            <p>
+                                Web application for the management and control
+                                of equipment sales all over the world. The
+                                application is developed with React and
+                                integrates a backend Strapi, with graphQL for
+                                the management of the different resources.
+                            </p>
+                        </div>
+                        <div>
+                            <Fade
+                                triggerOnce
+                                client:load
+                                direction="left"
+                            >
+                                <img
+                                    src="/images/iv22.png"
+                                    alt="iVascular"
+                                    class="rounded-lg"
+                                />
+                            </Fade>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-3/5">
+                        <Fade
+                            triggerOnce
+                            client:load
+                            direction="right"
+                        >
+                            <img
+                                src="/images/iv11.png"
+                                alt="iVascular"
+                                class="rounded-lg"
+                            />
+                        </Fade>
+                    </div>
+                </section>
+                <section
+                    class="flex justify-between flex-col md:flex-row mb-10"
+                >
+                    <div class="w-full md:w-2/5 hidden md:inline-block">
+                        <Fade
+                            triggerOnce
+                            client:load
+                            direction="left"
+                        >
+                            <img
+                                src="/images/iv33.png"
+                                alt="iVascular"
+                                class="rounded-lg"
+                            />
+                        </Fade>
+                    </div>
+                    <div class="w-full md:w-3/5 md:p-4 flex flex-col text-xl">
+                        <div class="md:px-4 mb-4">
+                            <p>
+                                Fully responsive design, developed with
+                                Bootstrap. Allows the user to see clearly the
+                                different products and their characteristics, as
+                                well as the different distributors, hospitals
+                                and accounts in each region. The tool shows the
+                                indispensable information through a dashboard
+                                design, and interactive graphs.
+                            </p>
+                        </div>
+                        <div class="md:hidden inline-block">
+                            <Fade
+                                triggerOnce
+                                client:load
+                                direction="left"
+                            >
+                                <img
+                                    src="/images/iv33.png"
+                                    alt="iVascular"
+                                    class="rounded-lg"
+                                />
+                            </Fade>
+                        </div>
+                        <div>
+                            <Fade
+                                triggerOnce
+                                client:load
+                                direction="right"
+                            >
+                                <img
+                                    src="/images/iv22.png"
+                                    alt="iVascular"
+                                    class="rounded-lg"
+                                />
+                            </Fade>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </section>
+    </main>
+</Layout>
+<style>
+    h1 {
+        font-weight: 700;
+        color: #faf9f6;
+    }
+
+    main {
+        width: 100%;
+    }
+
+    @media (min-width: 768px) {
+        main {
+            width: 85%;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        main {
+            width: 75%;
+        }
+    }
+
+    @media (min-width: 1200px) {
+        main {
+            width: 65%;
+        }
+    }
+</style>
