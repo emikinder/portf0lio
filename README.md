@@ -9,7 +9,7 @@
 
 ```bash
 $ git clone https://github.com/emikinder/portf0lio.git
-$ cd p0rtfolio
+$ cd portf0lio
 $ npm install
 $ npm run dev
 ```
