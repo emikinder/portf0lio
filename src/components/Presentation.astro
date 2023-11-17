@@ -2,11 +2,10 @@
 
 ---
 
-<section class="font-title flex flex-col items-left mx-auto">
-    <h1 class="name">Hey! I'm Emi Kinderknecht,<br> frontend developer.</h1>
-    <!-- <p>Hi! My name is Emiliano, I'm a</p> -->
-    <!-- <strong class="orange-text text-3xl mx-1">frontend developer</strong> -->
-    <!-- <p>based on Italy 👽</p> -->
+<section class="font-title flex flex-col mx-auto">
+    <h1 class="name text-center">
+        Hey! I'm Emi Kinderknecht,<br /> frontend developer.
+    </h1>
 </section>
 
 <style>
@@ -24,13 +23,19 @@
 
     @media (min-width: 481px) and (max-width: 768px) {
         .name {
-            font-size: 7vw;
+            font-size: 9vw;
         }
     }
 
-    @media (min-width: 769px) {
+    @media (min-width: 769px) and (max-width: 1024px) {
         .name {
-            font-size: 5rem;
+            font-size: 5.5rem;
+        }
+    }
+
+    @media (min-width: 1025px) {
+        .name {
+            font-size: 4rem;
         }
     }
 

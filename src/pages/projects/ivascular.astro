@@ -27,15 +27,17 @@ const project = projects.find((project) => project.title === "iVascular");
                     class="flex justify-between flex-col md:flex-row mb-10"
                 >
                     <div
-                        class="w-full md:w-2/5 md:p-3 flex flex-col justify-between"
+                        class="w-full md:w-2/5 md:p-3 flex flex-col justify-between text-xl"
                     >
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Dolor ducimus, incidunt pariatur sapiente ipsa
-                            blanditiis? Quam veniam, excepturi nam, fugiat
-                            ratione iure ab dicta voluptas sapiente similique
-                            vitae dolor maxime!
-                        </p>
+                        <div class="md:px-4 mb-4">
+                            <p>
+                                Web application for the management and control
+                                of equipment sales all over the world. The
+                                application is developed with React and
+                                integrates a backend Strapi, with graphQL for
+                                the management of the different resources.
+                            </p>
+                        </div>
                         <div>
                             <Fade
                                 triggerOnce
@@ -67,7 +69,7 @@ const project = projects.find((project) => project.title === "iVascular");
                 <section
                     class="flex justify-between flex-col md:flex-row mb-10"
                 >
-                    <div class="w-full md:w-2/5">
+                    <div class="w-full md:w-2/5 hidden md:inline-block">
                         <Fade
                             triggerOnce
                             client:load
@@ -80,16 +82,31 @@ const project = projects.find((project) => project.title === "iVascular");
                             />
                         </Fade>
                     </div>
-                    <div
-                        class="w-full md:w-3/5 md:p-3 flex flex-col justify-between"
-                    >
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Dolor ducimus, incidunt pariatur sapiente ipsa
-                            blanditiis? Quam veniam, excepturi nam, fugiat
-                            ratione iure ab dicta voluptas sapiente similique
-                            vitae dolor maxime!
-                        </p>
+                    <div class="w-full md:w-3/5 md:p-4 flex flex-col text-xl">
+                        <div class="md:px-4 mb-4">
+                            <p>
+                                Fully responsive design, developed with
+                                Bootstrap. Allows the user to see clearly the
+                                different products and their characteristics, as
+                                well as the different distributors, hospitals
+                                and accounts in each region. The tool shows the
+                                indispensable information through a dashboard
+                                design, and interactive graphs.
+                            </p>
+                        </div>
+                        <div class="md:hidden inline-block">
+                            <Fade
+                                triggerOnce
+                                client:load
+                                direction="left"
+                            >
+                                <img
+                                    src="/images/iv33.png"
+                                    alt="iVascular"
+                                    class="rounded-lg"
+                                />
+                            </Fade>
+                        </div>
                         <div>
                             <Fade
                                 triggerOnce
