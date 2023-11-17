@@ -1,21 +1,27 @@
 ---
 import ProjectsList from "../../components/ProjectsList.astro";
 import Layout from "../../layouts/Layout.astro";
+import { Fade } from "react-awesome-reveal";
 ---
 
 <Layout title="projects | emikinder">
     <main class="flex justify-center md:h-[100vh]">
         <section class="p-3 my-20 md:mt-36 md:p-0 w-[55rem]">
-            <h1 class="font-title text-center text-5xl mx-0 md:mx-28">
-                Latest projects I've been working on.
-            </h1>
+            <Fade
+                triggerOnce
+                client:load
+            >
+                <h1 class="font-title text-center text-5xl mx-0 md:mx-28">
+                    Latest projects I've been working on.
+                </h1>
+            </Fade>
             <ProjectsList />
         </section>
     </main>
 </Layout>
 <style>
     h1 {
-        font-weight: 800;
+        font-weight: 700;
         color: #faf9f6;
     }
 </style>

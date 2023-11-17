@@ -1,0 +1,44 @@
+{
+    "projects": [
+        {
+            "title": "Sares",
+            "subtitle": "Digital art.",
+            "description": "NFT art gallery website for a digital artist. Minimalist. Clean. Simple.",
+            "link": "https://artssec.netlify.app/",
+            "techs": ["Astro", "React", "Contentful"],
+            "color": 1
+        },
+        {
+            "title": "Artssec",
+            "subtitle": "Security company.",
+            "description": "Intitutional website. Representing the company's values and services.",
+            "link": "https://artssec.netlify.app/",
+            "techs": ["Gastby", "Contentful", "GraphQL"],
+            "color": 2
+        },
+        {
+            "title": "TicketVibe",
+            "subtitle": "Tickets for events.",
+            "description": "Website concept. Find and buy tickets for your favorite events.",
+            "link": "https://ticketvibe-emk.vercel.app/",
+            "github": "https://github.com/emikinder/ticketvibe",
+            "techs": ["React", "Vite", "TailwindCSS"],
+            "color": 3
+        },
+        {
+            "title": "iVascular",
+            "subtitle": "Medical devices and therapies.",
+            "description": "Dashboard for a medical devices company. Manage your patients, devices and therapies.",
+            "techs": ["React", "Typescript", "Bootstrap"],
+            "color": 4
+        },
+        {
+            "title": "Portf0lio",
+            "subtitle": "Personal portfolio.",
+            "description": "Just this portfolio, made with Astro and TailwindCSS. Always a work in progress.",
+            "techs": ["Astro", "TailwindCSS"],
+            "github": "https://github.com/emikinder/portf0lio",
+            "color": 5
+        }
+    ]
+}
