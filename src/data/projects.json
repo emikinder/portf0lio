@@ -4,7 +4,7 @@
             "title": "Sares",
             "subtitle": "Digital art.",
             "description": "NFT art gallery website for a digital artist. Minimalist. Clean. Simple.",
-            "link": "https://artssec.netlify.app/",
+            "link": "https://sares-web.netlify.app/",
             "techs": ["Astro", "React", "Contentful"],
             "color": 1
         },
@@ -29,7 +29,7 @@
             "title": "iVascular",
             "subtitle": "Medical devices and therapies.",
             "description": "Dashboard for a medical devices company. Manage your patients, devices and therapies.",
-            "techs": ["React", "Typescript", "Bootstrap"],
+            "techs": ["React", "Typescript", "GraphQL"],
             "color": 4
         },
         {
