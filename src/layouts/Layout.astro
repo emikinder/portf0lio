@@ -1,6 +1,7 @@
 ---
 import Navbar from "../components/Navbar.astro";
 import "@fontsource-variable/open-sans";
+import '@fontsource-variable/inter';
 import "@fontsource/roboto";
 import "@fontsource-variable/rubik";
 interface Props {
@@ -66,15 +67,18 @@ const { title } = Astro.props;
     }
 
     .font-title {
-        font-family: "Open Sans Variable", sans-serif;
+        font-family: "Inter Variable", sans-serif;
+        font-weight: 700;
+        letter-spacing: -2px;
     }
 
     .font-subtitle {
-        font-family: "Roboto", sans-serif;
+        font-family: "Inter Variable", sans-serif;
     }
 
     .font-text {
-        font-family: "Rubik Variable", sans-serif;
+        font-family: "Inter Variable", sans-serif;
+        font-weight: 300;
     }
 
     .hero::before {

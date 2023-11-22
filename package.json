@@ -14,6 +14,7 @@
     "@astrojs/tailwind": "^5.0.2",
     "@astrojs/vercel": "^5.0.2",
     "@emotion/react": "^11.11.1",
+    "@fontsource-variable/inter": "^5.0.15",
     "@fontsource-variable/open-sans": "^5.0.18",
     "@fontsource-variable/rubik": "^5.0.19",
     "@fontsource/roboto": "^5.0.8",
