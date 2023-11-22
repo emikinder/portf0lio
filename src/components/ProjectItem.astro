@@ -9,6 +9,7 @@ interface Props {
         link?: string;
         github?: string;
         techs: string[];
+        project: string;
         color: number;
     };
 }
@@ -21,7 +22,7 @@ const colors = {
     5: "bg-[#f39c19]",
 };
 
-const { title, subtitle, description, link, github, techs, color } =
+const { title, subtitle, description, link, github, project, techs, color } =
     Astro.props.project;
 ---
 
@@ -65,7 +66,7 @@ const { title, subtitle, description, link, github, techs, color } =
                     )
                 }
                 {
-                    link ? (
+                    link && (
                         <a
                             href={link}
                             target="_blank"
@@ -73,9 +74,12 @@ const { title, subtitle, description, link, github, techs, color } =
                         >
                             View site
                         </a>
-                    ) : (
+                    )
+                }
+                {
+                    project && (
                         <a
-                            href={`projects/${title.toLowerCase()}`}
+                            href={`projects/${project}`}
                             class="text-sm font-text hover:underline"
                         >
                             View project

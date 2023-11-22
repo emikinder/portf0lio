@@ -30,6 +30,7 @@
             "subtitle": "Medical devices and therapies.",
             "description": "Dashboard for a medical devices company. Manage your patients, devices and therapies.",
             "techs": ["React", "Typescript", "GraphQL"],
+            "project": "ivascular",
             "color": 4
         },
         {
