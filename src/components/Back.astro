@@ -1,0 +1,43 @@
+---
+---
+
+<a
+    class="back"
+    href="javascript:history.back()"
+>
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="68"
+        height="24"
+        fill="none"
+        viewBox="0 0 68 24"
+    >
+        <path
+            fill="#fff"
+            d="M67 12.924h1v-2h-1v2Zm-67 0h67v-2H0v2Z"
+        ></path>
+        <path
+            stroke="#fff"
+            stroke-width="2"
+            d="M67.344 12.111 54.285.755M67.344 11.737l-13.06 11.356"
+        ></path>
+    </svg>
+</a>
+<style>
+    .back svg {
+        max-width: 3rem;
+        animation: right-bounce 2s infinite;
+        rotate: 180deg;
+    }
+    @keyframes right-bounce {
+        0% {
+            transform: translateX(0);
+        }
+        50% {
+            transform: translateX(10px);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+</style>

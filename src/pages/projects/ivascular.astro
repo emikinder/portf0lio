@@ -4,17 +4,19 @@ import Layout from "../../layouts/Layout.astro";
 import { Fade } from "react-awesome-reveal";
 
 import { projects } from "../../data/projects.json";
+import Back from "../../components/Back.astro";
 const project = projects.find((project) => project.project === "ivascular");
 ---
 
 <Layout title="iVascular | emikinder">
-    <main class="flex justify-center mx-auto overflow-hidden hero">
-        <section class="mt-20 md:mt-36 p-3 md:p-0 relative">
+    <main class="flex justify-center mx-auto hero">
+        <section class="mt-20 md:mt-28 p-3 md:p-0 relative">
+            <Back />
             <Fade
                 triggerOnce
                 client:load
             >
-                <h1 class="font-title text-left text-5xl">{project.title}</h1>
+                <h1 class="font-title text-left text-5xl mt-4">{project.title}</h1>
                 <p class="font-subtitle text-left text-xl w-[70%]">
                     {project.description}
                 </p>
@@ -22,7 +24,7 @@ const project = projects.find((project) => project.project === "ivascular");
                     {project.techs.map((tech) => <Chip tech={tech} />)}
                 </div>
             </Fade>
-            <section class="flex flex-col mt-10">
+            <section class="flex flex-col mt-10 overflow-hidden">
                 <section
                     class="flex justify-between flex-col md:flex-row mb-10"
                 >
