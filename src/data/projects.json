@@ -3,6 +3,7 @@
         {
             "title": "Sares",
             "subtitle": "Digital art.",
+            "year": "2023",
             "description": "NFT art gallery website for a digital artist. Minimalist. Clean. Simple.",
             "link": "https://sares-web.netlify.app/",
             "techs": ["Astro", "React", "Contentful"],
@@ -11,6 +12,7 @@
         {
             "title": "Artssec",
             "subtitle": "Security company.",
+            "year": "2022",
             "description": "Intitutional website. Representing the company's values and services.",
             "link": "https://artssec.netlify.app/",
             "techs": ["Gastby", "Contentful", "GraphQL"],
@@ -19,6 +21,7 @@
         {
             "title": "TicketVibe",
             "subtitle": "Tickets for events.",
+            "year": "2023",
             "description": "Website concept. Find and buy tickets for your favorite events.",
             "link": "https://ticketvibe-emk.vercel.app/",
             "github": "https://github.com/emikinder/ticketvibe",
@@ -28,7 +31,8 @@
         {
             "title": "iVascular",
             "subtitle": "Medical devices and therapies.",
-            "description": "Dashboard for a medical devices company. Manage your patients, devices and therapies.",
+            "year": "2021",
+            "description": "Dashboard for a medical devices company. Manage patients, devices and therapies.",
             "techs": ["React", "Typescript", "GraphQL"],
             "project": "ivascular",
             "color": 4
@@ -36,10 +40,29 @@
         {
             "title": "Portf0lio",
             "subtitle": "Personal portfolio.",
+            "year": "2023",
             "description": "Just this portfolio, made with Astro and TailwindCSS. Always a work in progress.",
             "techs": ["Astro", "TailwindCSS"],
             "github": "https://github.com/emikinder/portf0lio",
             "color": 5
+        },
+        {
+            "title": "MAS Metalúrgica",
+            "subtitle": "Rental business.",
+            "year": "2018",
+            "description": "Web application for tool and machinery rental management.",
+            "techs": ["Python", "Django", "HTML", "PostgreSQL"],
+            "project": "mas",
+            "color": 6
+        },
+        {
+            "title": "Dei-Cas",
+            "subtitle": "Autoparts company.",
+            "year": "2018",
+            "description": "Website for manufacture and sale of auto parts company. News, products, contact and more.",
+            "techs": ["Python", "Django", "Boostrap", "PostgreSQL"],
+            "link": "https://www.dei-cas.com.ar/",
+            "color": 7
         }
     ]
 }

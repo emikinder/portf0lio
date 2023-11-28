@@ -5,6 +5,7 @@ interface Props {
     project: {
         title: string;
         subtitle: string;
+        year: number;
         description: string;
         link?: string;
         github?: string;
@@ -19,20 +20,31 @@ const colors = {
     2: "bg-[#00a550]",
     3: "bg-[#6622cc]",
     4: "bg-[#bb8bc5] text-black",
-    5: "bg-[#f39c19]",
+    5: "bg-[#194fa7]",
+    6: "bg-[#f39c19]",
+    7: "bg-[#dc3545]",
 };
 
-const { title, subtitle, description, link, github, project, techs, color } =
-    Astro.props.project;
+const {
+    title,
+    subtitle,
+    description,
+    link,
+    github,
+    project,
+    techs,
+    color,
+    year,
+} = Astro.props.project;
 ---
 
 <section
     class=`shadow flex rounded-lg text-white overflow-hidden ${colors[color]}`
 >
-    <div class="w-3/5 p-4 flex flex-col justify-between">
+    <div class="w-full p-4 flex flex-col justify-between">
         <div>
             <h3 class="text-2xl font-subtitle font-bold">{title}</h3>
-            <h4 class="text-sm font-text">{subtitle}</h4>
+            <h4 class="text-sm font-text">{subtitle}&nbsp;{year}.</h4>
             <p class="text-md mt-1 font-text">
                 {description}
             </p>
@@ -46,14 +58,13 @@ const { title, subtitle, description, link, github, project, techs, color } =
                 </section>
             )
         }
-    </div>
-    <div class="w-2/5 p-4 flex justify-end items-end gap-3">
+
         <Slide
             triggerOnce
             direction="right"
             client:load
         >
-            <div class="flex flex-col">
+            <div class="w-full flex justify-end mt-2 links">
                 {
                     github && (
                         <a
@@ -90,4 +101,9 @@ const { title, subtitle, description, link, github, project, techs, color } =
         </Slide>
     </div>
 </section>
-<style></style>
+<style>
+    .links > * {
+        margin-left: 0.7rem;
+        font-weight: 600;
+    }
+</style>
