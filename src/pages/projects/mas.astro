@@ -5,10 +5,10 @@ import { Fade } from "react-awesome-reveal";
 
 import { projects } from "../../data/projects.json";
 import Back from "../../components/Back.astro";
-const project = projects.find((project) => project.project === "ivascular");
+const project = projects.find((project) => project.project === "mas");
 ---
 
-<Layout title="iVascular | emikinder">
+<Layout title="mas | emikinder">
     <main class="flex justify-center mx-auto hero">
         <section class="mt-20 md:mt-28 p-3 md:p-0 relative">
             <Back />
@@ -33,12 +33,12 @@ const project = projects.find((project) => project.project === "ivascular");
                     >
                         <div class="md:px-4 mb-4">
                             <p>
-                                Web application for the management and control
-                                of equipment sales all over the world. The
-                                application is developed with React and
-                                integrates a Strapi backend and graphQL as the
-                                query language for the management of the
-                                different resources.
+                                Web application developed in Python with Django
+                                framework. Allows the user to manage the
+                                products, stocks, prices, clients and orders of
+                                rental. Generates also alerts when the stock of
+                                a product is low, and when rental orders are
+                                about to expire.
                             </p>
                         </div>
                         <div>
@@ -48,8 +48,8 @@ const project = projects.find((project) => project.project === "ivascular");
                                 direction="left"
                             >
                                 <img
-                                    src="/images/ivascular/iv5.png"
-                                    alt="iVascular"
+                                    src="/images/mas/new-client.png"
+                                    alt="Mas"
                                     class="rounded-lg mb-2"
                                 />
                             </Fade>
@@ -62,8 +62,8 @@ const project = projects.find((project) => project.project === "ivascular");
                             direction="right"
                         >
                             <img
-                                src="/images/ivascular/iv1.png"
-                                alt="iVascular"
+                                src="/images/mas/inicio.png"
+                                alt="Mas"
                                 class="rounded-lg"
                             />
                         </Fade>
@@ -79,22 +79,21 @@ const project = projects.find((project) => project.project === "ivascular");
                             direction="left"
                         >
                             <img
-                                src="/images/ivascular/iv3.png"
-                                alt="iVascular"
-                                class="rounded-lg"
+                                src="/images/mas/remito.png"
+                                alt="Mas"
+                                class="rounded-lg w-full"
                             />
                         </Fade>
                     </div>
-                    <div class="w-full md:w-3/5 md:pl-4 flex flex-col text-xl text-center">
+                    <div class="w-full md:w-3/5 md:p-4 flex flex-col text-xl text-center">
                         <div class="md:px-4 mb-4">
                             <p>
-                                Fully responsive design, developed with
-                                Bootstrap. Allows the user to see clearly the
-                                different products and their characteristics, as
-                                well as the different distributors, hospitals
-                                and accounts in each region. The tool shows the
-                                indispensable information through a dashboard
-                                design, and interactive graphs.
+                                Rental receipt are generated automatically.
+                                Allows partial or total returns, the same as
+                                payments. The user can visibilize the financial
+                                status of the day, week, month or year. Also can
+                                generate reports of clients, products, orders
+                                and payments in .xlsx format.
                             </p>
                         </div>
                         <div class="md:hidden inline-block">
@@ -104,8 +103,8 @@ const project = projects.find((project) => project.project === "ivascular");
                                 direction="left"
                             >
                                 <img
-                                    src="/images/ivascular/iv3.png"
-                                    alt="iVascular"
+                                    src="/images/mas/remito.png"
+                                    alt="Mas"
                                     class="rounded-lg mb-2"
                                 />
                             </Fade>
@@ -117,8 +116,8 @@ const project = projects.find((project) => project.project === "ivascular");
                                 direction="right"
                             >
                                 <img
-                                    src="/images/ivascular/iv2.png"
-                                    alt="iVascular"
+                                    src="/images/mas/cont.png"
+                                    alt="Mas"
                                     class="rounded-lg"
                                 />
                             </Fade>
