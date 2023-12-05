@@ -2,12 +2,46 @@
 
 ---
 
-<section class="w-full text-center my-20">
-    <h2 class="font-title mail text-2xl">emikinderk@gmail.com</h2>
+<section class="w-full text-center mt-10 mb-20 text-white">
+    <h2 class="font-title text-3xl mb-4">Let's talk 🧉</h2>
+    <div class="flex justify-center items-center">
+        <a
+            class="font-title text-4xl"
+            href="mailto:hi@emikinder.dev"
+            >hi@emikinder.dev</a
+        >
+        <button
+            class="ml-3"
+            onmousedown="party.confetti(this, {
+                count: party.variation.range(50, 60),
+                spread: party.variation.range(60, 80),
+                size: party.variation.range(0.8, 1.2),
+            })"
+        >
+            <img
+                id="copy"
+                src="/images/copy.svg"
+                class="inline-block w-4 h-4"
+            />
+            <img
+                id="check"
+                src="/images/check.svg"
+                class="w-4 h-4 hidden"
+            />
+        </button>
+    </div>
 </section>
-<style>
-    .mail {
-        font-weight: 700;
-        color: #faf9f6;
-    }
-</style>
+<script is:inline>
+    const copy = document.getElementById("copy");
+    const check = document.getElementById("check");
+    const handleCopy = () => {
+        check.classList.remove("hidden");
+        copy.classList.add("hidden");
+        navigator.clipboard.writeText("hi@emikinder.dev");
+        setTimeout(() => {
+            check.classList.add("hidden");
+            copy.classList.remove("hidden");
+        }, 3000);
+    };
+    copy.addEventListener("click", handleCopy);
+</script>
