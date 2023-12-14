@@ -19,6 +19,15 @@
             "color": 2
         },
         {
+            "title": "Mesh Identity",
+            "subtitle": "Business Identity.",
+            "year": "2023",
+            "description": "Landing page for a B2B identity management platform.",
+            "link": "https://mesh.id/",
+            "techs": ["HTML", "CSS", "Javascript"],
+            "color": 8
+        },
+        {
             "title": "TicketVibe",
             "subtitle": "Tickets for events.",
             "year": "2023",
