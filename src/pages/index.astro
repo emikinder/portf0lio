@@ -7,7 +7,7 @@ import Contact from "../components/Contact.astro";
 ---
 
 <Layout title="emikinder | dev">
-    <main class="flex flex-col justify-center mx-auto hero">
+    <main class="flex flex-col justify-center mx-auto hero w-full md:w-[85%] lg:w-3/4 xl:w-[65%]">
         <section class="mt-20 md:mt-36 p-3 md:p-0 relative">
             <Presentation />
             <About />
@@ -16,27 +16,3 @@ import Contact from "../components/Contact.astro";
         </section>
     </main>
 </Layout>
-
-<style>
-    main {
-        width: 100%;
-    }
-
-    @media (min-width: 768px) {
-        main {
-            width: 85%;
-        }
-    }
-
-    @media (min-width: 1024px) {
-        main {
-            width: 75%;
-        }
-    }
-
-    @media (min-width: 1200px) {
-        main {
-            width: 65%;
-        }
-    }
-</style>
