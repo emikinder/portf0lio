@@ -1,6 +1,16 @@
 {
     "projects": [
         {
+            "title": "Marene Raccolta",
+            "subtitle": "Garbage collection service.",
+            "year": "2024",
+            "description": "Web app. Garbage collection schedule, service information and notices.",
+            "link": "https://marene-raccolta.vercel.app/",
+            "github": "https://github.com/emikinder/marene-raccolta-rifiuti",
+            "techs": ["Vite", "React", "Typescript", "Firebase"],
+            "color": 5
+        },
+        {
             "title": "Sares",
             "subtitle": "Digital art.",
             "year": "2023",
@@ -13,7 +23,7 @@
             "title": "Artssec",
             "subtitle": "Security company.",
             "year": "2022",
-            "description": "Intitutional website. Representing the company's values and services.",
+            "description": "Institutional website. Representing the company's values and services.",
             "link": "https://artssec.netlify.app/",
             "techs": ["Gastby", "Contentful", "GraphQL"],
             "color": 2
