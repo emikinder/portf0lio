@@ -1,4 +1,15 @@
-import contentful from "contentful";
+import contentful, { type EntryFieldTypes } from "contentful";
+
+export interface Post {
+    contentTypeId: "post";
+    fields: {
+        title: EntryFieldTypes.Text;
+        slug: EntryFieldTypes.Text;
+        createdAt: EntryFieldTypes.Date;
+        description: EntryFieldTypes.Text;
+        body: EntryFieldTypes.RichText;
+    };
+}
 
 export const contentfulClient = contentful.createClient({
     space: import.meta.env.CONTENTFUL_SPACE_ID,

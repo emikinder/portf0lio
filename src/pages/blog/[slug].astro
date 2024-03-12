@@ -1,0 +1,52 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { contentfulClient } from "../../lib/contentful";
+import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
+import type { Post } from "../../lib/contentful";
+// import { Fade } from "react-awesome-reveal";
+import Back from "../../components/Back.astro";
+import Icon from "astro-icon";
+
+export async function getStaticPaths() {
+    const entries = await contentfulClient.getEntries<Post>({
+        content_type: "post",
+    });
+
+    const pages = entries.items.map((item) => ({
+        params: { slug: item.fields.slug },
+        props: {
+            title: item.fields.title,
+            body: documentToHtmlString(item.fields.body),
+            createdAt: new Date(item.fields.createdAt).toLocaleDateString(
+                "en-US",
+                { year: "numeric", month: "short", day: "numeric" }
+            ),
+        },
+    }));
+    return pages;
+}
+
+const { title, body, createdAt } = Astro.props;
+---
+
+<Layout title={`${title} | emikinder`}>
+    <main class="flex justify-center hero">
+        <section class="p-3 my-20 md:mt-24 md:p-0 w-[55rem] relative">
+            <Back />
+            <div class="mt-4 md:mt-12 flex flex-col gap-4 text-white">
+                <div>
+                    <p class="font-subtitle font-bold text-4xl">
+                        {title}
+                    </p>
+                    <p class="flex text-md gap-1 text-orange-500 italic">
+                        <Icon
+                            name="calendar"
+                            class="w-6 h-6"
+                        />{createdAt}
+                    </p>
+                </div>
+                <article class="text-xl" set:html={body} />
+            </div>
+        </section>
+    </main>
+</Layout>

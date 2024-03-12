@@ -6,15 +6,15 @@ const { post } = Astro.props;
 
 <div class="w-full p-4 rounded-lg border-2 text-white mb-4 flex flex-col">
     <a
-        href=`/blog/${post.fields.slug}`
-        class="text-2xl font-title hover:text-orange-500 transition-colors duration-300 ease-in-out"
-        >{post.fields.title}</a
+        href=`/blog/${post.slug}/`
+        class="text-2xl font-subtitle font-bold hover:text-orange-500 transition-colors duration-300 ease-in-out"
+        >{post.title}</a
     >
     <p class="flex text-sm gap-1">
         <Icon
             name="calendar"
             class="w-4 h-4 text-white"
-        />{post.fields.createdAt}
+        />{post.createdAt}
     </p>
-    <p class="text-xl mt-1">{post.fields.description}</p>
+    <p class="text-xl mt-1">{post.description}</p>
 </div>
