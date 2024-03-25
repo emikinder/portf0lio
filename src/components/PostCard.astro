@@ -4,17 +4,21 @@ import Icon from "astro-icon";
 const { post } = Astro.props;
 ---
 
-<div class="w-full p-4 rounded-lg border-2 text-white mb-4 flex flex-col">
-    <a
-        href=`/blog/${post.slug}/`
-        class="text-2xl font-subtitle font-bold hover:text-orange-500 transition-colors duration-300 ease-in-out"
-        >{post.title}</a
+<a
+    class="w-full p-4 rounded-lg border-2 group text-white mb-4 flex flex-col"
+    href=`/blog/${post.slug}/`
+>
+    <p
+        transition:name={`hero-${post.slug}`}
+        class="text-2xl font-subtitle font-bold group-hover:text-orange-500 transition-colors duration-300 ease-in-out"
     >
-    <p class="flex text-sm gap-1">
+        {post.title}
+    </p>
+    <p class="flex text-sm items-center gap-1 text-orange-500 italic">
         <Icon
             name="calendar"
-            class="w-4 h-4 text-white"
+            class="w-4 h-4"
         />{post.createdAt}
     </p>
     <p class="text-xl mt-1">{post.description}</p>
-</div>
+</a>

@@ -4,6 +4,8 @@ import "@fontsource-variable/open-sans";
 import "@fontsource-variable/inter";
 import "@fontsource/roboto";
 import "@fontsource-variable/rubik";
+
+import { ViewTransitions } from 'astro:transitions';
 interface Props {
     title: string;
 }
@@ -37,6 +39,7 @@ const { title } = Astro.props;
             content="black"
         />
         <title>{title}</title>
+        <ViewTransitions />
     </head>
     <body>
         <Navbar />
@@ -124,6 +127,18 @@ const { title } = Astro.props;
             background-size: var(--grid-size) var(--grid-size);
             -webkit-mask-image: linear-gradient(0deg, transparent 5%, #000);
             mask-image: linear-gradient(0deg, transparent 5%, #000);
+        }
+
+        .blog-body h2 {
+            font-size: x-large;
+            font-family: "Inter Variable", sans-serif;
+            font-weight: 700;
+        }
+
+        .blog-body p {
+            font-size: large;
+            font-family: "Consolas", sans-serif;
+            /* font-weight: 300; */
         }
     </style>
 </html>

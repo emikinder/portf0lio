@@ -17,16 +17,19 @@ export async function getStaticPaths() {
         props: {
             title: item.fields.title,
             body: documentToHtmlString(item.fields.body),
+            description: item.fields.description,
             createdAt: new Date(item.fields.createdAt).toLocaleDateString(
                 "en-US",
                 { year: "numeric", month: "short", day: "numeric" }
             ),
+            slug: item.fields.slug,
         },
     }));
     return pages;
 }
 
-const { title, body, createdAt } = Astro.props;
+const { title, body, description, createdAt, slug } = Astro.props;
+const bodyWithBreaks = body.replace(/\n/g, "<br />");
 ---
 
 <Layout title={`${title} | emikinder`}>
@@ -35,17 +38,24 @@ const { title, body, createdAt } = Astro.props;
             <Back />
             <div class="mt-4 md:mt-12 flex flex-col gap-4 text-white">
                 <div>
-                    <p class="font-subtitle font-bold text-4xl">
+                    <p
+                        class="font-subtitle font-bold text-4xl"
+                        transition:name={`hero-${slug}`}
+                    >
                         {title}
                     </p>
-                    <p class="flex text-md gap-1 text-orange-500 italic">
+                    <p class="flex text-md gap-1 text-orange-500 italic items-center">
                         <Icon
                             name="calendar"
-                            class="w-6 h-6"
+                            class="w-4 h-4"
                         />{createdAt}
                     </p>
                 </div>
-                <article class="text-xl" set:html={body} />
+                <article class="text-xl">{description}</article>
+                <article
+                    class="blog-body"
+                    set:html={bodyWithBreaks}
+                />
             </div>
         </section>
     </main>
