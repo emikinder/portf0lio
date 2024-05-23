@@ -1,0 +1,28 @@
+---
+import { contentfulClient } from "../lib/contentful";
+import type { Post } from "../lib/contentful";
+import PostCard from "./PostCard.astro";
+
+const entries = await contentfulClient.getEntries<Post>({
+    content_type: "post",
+    order: ["-fields.createdAt"],
+});
+
+const posts = entries.items.map((item) => {
+    const { title, createdAt, description, slug } = item.fields;
+    return {
+        title,
+        slug,
+        description,
+        createdAt: new Date(createdAt).toLocaleDateString(),
+    };
+});
+---
+
+<section class="my-10">
+    {
+        posts.map((post) => {
+            return <PostCard post={post} />;
+        })
+    }
+</section>
