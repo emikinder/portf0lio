@@ -1,6 +1,15 @@
 {
     "projects": [
         {
+            "title": "NotSociety",
+            "subtitle": "Tech House webpage",
+            "year": "2023",
+            "description": "Website for software company",
+            "link": "https://notsociety.com/",
+            "techs": ["Astro", "React", "Contentful"],
+            "color": 9
+        },
+        {
             "title": "Marene Raccolta",
             "subtitle": "Garbage collection service.",
             "year": "2024",
