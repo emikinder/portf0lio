@@ -1,0 +1,63 @@
+---
+import Icon from 'astro-icon';
+import SocialLink from './SocialLink.astro';
+
+const year = new Date().getFullYear();
+---
+
+<section
+  class="h-100vh w-full center-class flex flex-col border-y-2 border-dashed border-gray-100 mb-10"
+>
+  <Icon
+    name="close"
+    class="rotate-45 w-[20px] absolute top-6 left-5 md:top-12 md:left-16"
+  />
+  <Icon
+    name="l"
+    class="w-[70px] md:w-[100px] absolute right-0 top-0 md:top-12 md:right-16"
+  />
+  <section class="flex-grow flex flex-col justify-center">
+    <a
+      href="#"
+      id="mail"
+      class="font-inclusive text-5xl md:text-8xl lg:text-9xl xl:text-[12rem]"
+    >
+      hey@<br />emikinder.dev
+    </a>
+  </section>
+  <section class="w-full md:w-10/12 flex gap-12 items-center pb-10">
+    <section class="hidden md:block w-1/3">
+      <h6>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+        cupiditate tempore eos corporis ex minus ipsum doloremque provident
+        <br />
+        dolore voluptate dolorem.
+      </h6>
+    </section>
+    <div
+      class="w-1/2 gap-5 flex items-center justify-end md:justify-center md:w-1/3"
+    >
+      <SocialLink
+        href="https://www.instagram.com/emikinderknecht/"
+        label="Instagram"
+        icon="ig"
+        hoverColor="hover:text-customPink"
+      />
+      <SocialLink
+        href="https://www.linkedin.com/in/emiliano-kinderknecht/"
+        label="LinkedIn"
+        icon="linkedin"
+        hoverColor="hover:text-customPurple"
+      />
+      <SocialLink
+        href="https://www.github.com/emikinder/"
+        label="GitHub"
+        icon="github"
+        hoverColor="hover:text-customYellow"
+      />
+    </div>
+    <div class="w-1/2 flex items-center justify-start md:justify-end md:w-1/3">
+      <h6>{year} | All rights reserved</h6>
+    </div>
+  </section>
+</section>

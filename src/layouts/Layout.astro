@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar.astro';
 import '@fontsource-variable/inter';
 import '@fontsource-variable/open-sans';
 import '@fontsource-variable/inconsolata';
+import '@fontsource/inclusive-sans';
 
 import { ViewTransitions } from 'astro:transitions';
 interface Props {
@@ -74,17 +75,12 @@ const { title } = Astro.props;
     <title>{title}</title>
     <ViewTransitions />
   </head>
-  <body>
-    <Navbar />
+  <body class="bg-customBlack text-customWhite">
+    <!-- <Navbar /> -->
     <slot />
-  </body>
-  <style is:global>
+  </body><style is:global>
     :root {
       color-scheme: dark;
-    }
-    html {
-      color: #757574;
-      background-color: #000;
     }
 
     .center-class {
@@ -94,43 +90,51 @@ const { title } = Astro.props;
     }
 
     h1 {
-      font-family: 'Open Sans', sans-serif;
+      font-family: 'Open Sans Variable', sans-serif;
       font-style: bold;
-      font-size: 250;
+      font-size: 250px;
     }
 
     h2 {
-      font-family: 'Open Sans', sans-serif;
+      font-family: 'Open Sans Variable', sans-serif;
       font-style: bold;
-      font-size: 100;
+      font-size: 100px;
     }
 
     h3 {
-      font-family: 'Open Sans', sans-serif;
+      font-family: 'Open Sans Variable', sans-serif;
       font-style: bold;
-      font-size: 70;
+      font-size: 70px;
     }
 
     h4 {
-      font-family: 'Open Sans', sans-serif;
+      font-family: 'Open Sans Variable', sans-serif;
       font-style: normal;
-      font-size: 40;
+      font-size: 40px;
     }
 
     h5 {
-      font-family: 'Inconsolata', sans-serif;
+      font-family: 'Inconsolata Variable', sans-serif;
       font-style: normal;
-      font-size: 25;
+      font-size: 25px;
     }
 
     h6 {
-      font-family: 'Inconsolata', sans-serif;
+      font-family: 'Inconsolata Variable', sans-serif;
       font-style: normal;
-      font-size: 15;
+      font-size: 10px;
     }
 
-    .font-text {
-      font-family: 'Inconsolata', sans-serif;
+    .font-inconsolata {
+      font-family: 'Inconsolata Variable', sans-serif;
+    }
+
+    .font-inclusive {
+      font-family: 'Inclusive Sans', sans-serif;
+    }
+
+    .h-100vh {
+      height: 100svh;
     }
   </style>
 </html>
