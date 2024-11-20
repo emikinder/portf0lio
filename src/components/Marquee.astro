@@ -1,0 +1,15 @@
+---
+const { text = 'SKILLS', repetitions = 10 } = Astro.props;
+const items = Array.from({ length: repetitions }, () => text);
+---
+
+<section
+  class="relative overflow-x-hidden w-full h-[10vh] items-center flex font-inclusive border-y-2 border-dashed border-gray-100"
+>
+  <div class="animate-marquee whitespace-nowrap">
+    {items.map((item, _) => <span class="mx-3 text-4xl">{item}</span>)}
+  </div>
+  <div class="absolute animate-marquee2 whitespace-nowrap">
+    {items.map((item, _) => <span class="mx-3 text-4xl">{item}</span>)}
+  </div>
+</section>

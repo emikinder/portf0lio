@@ -1,16 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import About from '../components/About.astro';
-import Presentation from '../components/Presentation.astro';
-import ProjectsPreview from '../components/ProjectsPreview.astro';
-import Contact from '../components/Contact.astro';
+import Marquee from '../components/Marquee.astro';
 import Footer from '../components/Footer.astro';
 ---
 
 <Layout title="emikinder | dev">
-  <main
-    class="flex flex-col justify-center mx-auto w-full"
-  >
+  <main class="flex flex-col justify-center mx-auto w-full">
+    <Marquee />
     <Footer />
   </main>
 </Layout>
