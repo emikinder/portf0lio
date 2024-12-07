@@ -10,6 +10,7 @@ export default {
         customGreen: '#C1D96A',
         customPurple: '#B599F2',
         customYellow: '#F2DD72',
+        customBlue: '#A7D8F2',
       },
       animation: {
         marquee: 'marquee 20s linear infinite',

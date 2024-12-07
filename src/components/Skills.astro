@@ -1,0 +1,200 @@
+---
+import Icon from 'astro-icon';
+
+const skills = ['React', 'Nextjs', 'Typescript', 'Threejs', 'No-code'];
+const items = [
+  {
+    color: 'bg-customYellow',
+    position: 'top-[10%] right-[45%]',
+    moveDirection: 'translate(2px, -2px)',
+  },
+  {
+    color: 'bg-customGreen',
+    position: 'top-[40%] right-[20%]',
+    moveDirection: 'translate(2px, 2px)',
+  },
+  {
+    color: 'bg-customPink',
+    position: 'left-[39%] top-[50%]',
+    moveDirection: 'translate(-2px, 2px)',
+  },
+  {
+    color: 'bg-customBlue',
+    position: 'bottom-[30%] left-[12%]',
+    moveDirection: 'translate(-2px, -2px)',
+  },
+  {
+    color: 'bg-customPurple',
+    position: 'bottom-[20%] right-[39%]',
+    moveDirection: 'translate(2px, 2px)',
+  },
+];
+---
+
+<section class="relative h-[90vh] w-full center-class flex">
+  <section class="w-full h-full md:w-2/5 md:border-dashed md:border-r">
+    {
+      skills.map((skill, i) => (
+        <section class="flex relative items-center justify-center h-1/5 border-y border-white first:border-t-0 last:border-b-0 animate-bg">
+          <h5 class="font-inclusive">{skill}</h5>
+          {i !== skills.length - 1 && (
+            <Icon
+              name="circle"
+              class="absolute -right-1 -bottom-1 w-[6px] h-[6px] hidden md:block"
+            />
+          )}
+        </section>
+      ))
+    }
+  </section>
+  <section class="hidden md:block w-3/5 overflow-hidden h-full relative">
+    <svg
+      viewBox="0 0 400 400"
+      class="w-full h-full"
+    >
+      <circle
+        id="circle1"
+        r="180"
+        cx="40"
+        cy="60"
+        fill="none"
+        class="stroke-customWhite"
+      ></circle>
+      <circle
+        id="circle2"
+        r="300"
+        cx="550"
+        cy="260"
+        fill="none"
+        class="stroke-customWhite"
+      ></circle>
+      <circle
+        id="circle3"
+        r="310"
+        cx="240"
+        cy="450"
+        fill="none"
+        class="stroke-customWhite"
+      ></circle>
+    </svg>
+    {
+      items.map((item) => (
+        <div
+          class={`
+          absolute w-6 h-6 rounded-full transition-all duration-300
+          ${item.color} ${item.position}
+        `}
+        />
+      ))
+    }
+  </section>
+</section>
+<style>
+  .animate-bg {
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.5s ease;
+  }
+
+  .animate-bg h5 {
+    position: relative;
+    z-index: 1;
+  }
+
+  .animate-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #F2B5A7;
+    transition: left 0.5s ease;
+    z-index: 0;
+  }
+
+  .animate-bg:hover::before {
+    left: 0;
+  }
+</style>
+<script type="module">
+  import GUI from 'https://cdn.jsdelivr.net/npm/lil-gui@0.20/+esm';
+  const gui = new GUI().close();
+  const circle1 = document.getElementById('circle1');
+  const circle2 = document.getElementById('circle2');
+  const circle3 = document.getElementById('circle3');
+  const params1 = {
+    cx: parseFloat(circle1.getAttribute('cx')),
+    cy: parseFloat(circle1.getAttribute('cy')),
+    r: parseFloat(circle1.getAttribute('r')),
+  };
+  const params2 = {
+    cx: parseFloat(circle2.getAttribute('cx')),
+    cy: parseFloat(circle2.getAttribute('cy')),
+    r: parseFloat(circle2.getAttribute('r')),
+  };
+  const params3 = {
+    cx: parseFloat(circle3.getAttribute('cx')),
+    cy: parseFloat(circle3.getAttribute('cy')),
+    r: parseFloat(circle3.getAttribute('r')),
+  };
+  const folderCircle1 = gui.addFolder('Circle1').close();
+  const folderCircle2 = gui.addFolder('Circle2').close();
+  const folderCircle3 = gui.addFolder('Circle3').close();
+  folderCircle1
+    .add(params1, 'r', 1, 1000)
+    .onChange((value) => {
+      circle1.setAttribute('r', value);
+    })
+    .name('r');
+  folderCircle1
+    .add(params1, 'cx', 1, 1000)
+    .onChange((value) => {
+      circle1.setAttribute('cx', value);
+    })
+    .name('cx');
+  folderCircle1
+    .add(params1, 'cy', 1, 1000)
+    .onChange((value) => {
+      circle1.setAttribute('cy', value);
+    })
+    .name('cy');
+
+  folderCircle2
+    .add(params2, 'r', 1, 1000)
+    .onChange((value) => {
+      circle2.setAttribute('r', value);
+    })
+    .name('r');
+  folderCircle2
+    .add(params2, 'cx', 1, 1000)
+    .onChange((value) => {
+      circle2.setAttribute('cx', value);
+    })
+    .name('cx');
+  folderCircle2
+    .add(params2, 'cy', 1, 1000)
+    .onChange((value) => {
+      circle2.setAttribute('cy', value);
+    })
+    .name('cy');
+
+  folderCircle3
+    .add(params3, 'r', 1, 1000)
+    .onChange((value) => {
+      circle3.setAttribute('r', value);
+    })
+    .name('r');
+  folderCircle3
+    .add(params3, 'cx', 1, 1000)
+    .onChange((value) => {
+      circle3.setAttribute('cx', value);
+    })
+    .name('cx');
+  folderCircle3
+    .add(params3, 'cy', 1, 1000)
+    .onChange((value) => {
+      circle3.setAttribute('cy', value);
+    })
+    .name('cy');
+</script>
