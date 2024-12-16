@@ -1,32 +1,36 @@
 ---
 import Icon from 'astro-icon';
 
-const skills = ['React', 'Nextjs', 'Typescript', 'Threejs', 'No-code'];
 const items = [
   {
     color: 'bg-customYellow',
-    position: 'top-[10%] right-[45%]',
+    position: 'top-20 left-[53%]',
     moveDirection: 'translate(2px, -2px)',
+    title: 'React',
   },
   {
     color: 'bg-customGreen',
     position: 'top-[40%] right-[20%]',
     moveDirection: 'translate(2px, 2px)',
+    title: 'Nextjs',
   },
   {
     color: 'bg-customPink',
     position: 'left-[39%] top-[50%]',
     moveDirection: 'translate(-2px, 2px)',
+    title: 'Typescript',
   },
   {
     color: 'bg-customBlue',
     position: 'bottom-[30%] left-[12%]',
     moveDirection: 'translate(-2px, -2px)',
+    title: 'Threejs',
   },
   {
     color: 'bg-customPurple',
     position: 'bottom-[20%] right-[39%]',
     moveDirection: 'translate(2px, 2px)',
+    title: 'No-code',
   },
 ];
 ---
@@ -34,10 +38,14 @@ const items = [
 <section class="relative h-[90vh] w-full center-class flex">
   <section class="w-full h-full md:w-2/5 md:border-dashed md:border-r">
     {
-      skills.map((skill, i) => (
-        <section class="flex relative items-center justify-center h-1/5 border-y border-white first:border-t-0 last:border-b-0 animate-bg">
-          <h5 class="font-inclusive">{skill}</h5>
-          {i !== skills.length - 1 && (
+      items.map((skill, i) => (
+        <section
+          id={skill.title}
+          class={`flex relative items-center justify-center h-1/5 border-y border-white
+                  first:border-t-0 last:border-b-0 animate-bg`}
+        >
+          <h5 class="font-inclusive">{skill.title}</h5>
+          {i !== items.length - 1 && (
             <Icon
               name="circle"
               class="absolute -right-1 -bottom-1 w-[6px] h-[6px] hidden md:block"
@@ -76,46 +84,20 @@ const items = [
         fill="none"
         class="stroke-customWhite"
       ></circle>
+      {
+        items.map((item) => (
+          <div
+            class={`
+            z-10 absolute w-6 h-6 rounded-full transition-all duration-300
+            ${item.color} ${item.position}
+            `}
+          />
+        ))
+      }
     </svg>
-    {
-      items.map((item) => (
-        <div
-          class={`
-          absolute w-6 h-6 rounded-full transition-all duration-300
-          ${item.color} ${item.position}
-        `}
-        />
-      ))
-    }
   </section>
 </section>
 <style>
-  .animate-bg {
-    position: relative;
-    overflow: hidden;
-    transition: background-color 0.5s ease;
-  }
-
-  .animate-bg h5 {
-    position: relative;
-    z-index: 1;
-  }
-
-  .animate-bg::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background-color: #F2B5A7;
-    transition: left 0.5s ease;
-    z-index: 0;
-  }
-
-  .animate-bg:hover::before {
-    left: 0;
-  }
 </style>
 <script type="module">
   import GUI from 'https://cdn.jsdelivr.net/npm/lil-gui@0.20/+esm';
