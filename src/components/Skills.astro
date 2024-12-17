@@ -55,162 +55,20 @@ const items = [
       ))
     }
   </section>
-  <section class="hidden md:block w-3/5 overflow-hidden h-full relative">
-    <svg
-      viewBox="0 0 400 400"
-    >
-      <svg
-        x="0"
-        y="0"
-      >
-        <circle
-        id="circle1"
-        r="180"
-        cx="40"
-        cy="60"
-        fill="none"
-        class="stroke-customWhite"
-      ></circle>
-      <circle
-        id="react"
-        r="5"
-        cx="220"
-        cy="60"
-        class="stroke-customYellow fill-customYellow"
-      ></circle>
-      <circle
-        id="react"
-        r="5"
-        cx="82"
-        cy="235"
-        class="stroke-customBlue fill-customBlue"
-      ></circle>
-      </svg>
-      <circle
-        id="circle3"
-        r="310"
-        cx="240"
-        cy="450"
-        fill="none"
-        class="stroke-customWhite"
-      ></circle>
-      <svg>
-      <circle
-        id="react"
-        r="5"
-        cx="315"
-        cy="150"
-        class="stroke-customPink fill-customPink"
-      ></circle>
-      <circle
-        id="react"
-        r="5"
-        cx="145"
-        cy="155"
-        class="stroke-customGreen fill-customGreen"
-      ></circle>
-      
-      </svg>
-      <svg>
-        <circle
-        id="circle2"
-        r="300"
-        cx="550"
-        cy="260"
-        fill="none"
-        class="stroke-customWhite"
-      ></circle>
-      <circle
-        id="react"
-        r="5"
-        cx="255"
-        cy="205"
-        class="stroke-customPurple fill-customPurple"
-      ></circle>
-      </svg>
-    </svg>
+  <section id="canvas-section" class="hidden md:block w-3/5 h-full">
+    <canvas id="scene"></canvas>
   </section>
 </section>
 <style>
+  #scene {
+    width: 100%;
+    height: 100%;
+  }
 </style>
-<script type="module">
-  import GUI from 'https://cdn.jsdelivr.net/npm/lil-gui@0.20/+esm';
-  const gui = new GUI().close();
-  const circle1 = document.getElementById('circle1');
-  // const circle2 = document.getElementById('circle2');
-  // const circle3 = document.getElementById('circle3');
-  const params1 = {
-    cx: parseFloat(circle1.getAttribute('cx')),
-    cy: parseFloat(circle1.getAttribute('cy')),
-    r: parseFloat(circle1.getAttribute('r')),
-  };
-  // const params2 = {
-  //   cx: parseFloat(circle2.getAttribute('cx')),
-  //   cy: parseFloat(circle2.getAttribute('cy')),
-  //   r: parseFloat(circle2.getAttribute('r')),
-  // };
-  // const params3 = {
-  //   cx: parseFloat(circle3.getAttribute('cx')),
-  //   cy: parseFloat(circle3.getAttribute('cy')),
-  //   r: parseFloat(circle3.getAttribute('r')),
-  // };
-  const folderCircle1 = gui.addFolder('Circle1').close();
-  // const folderCircle2 = gui.addFolder('Circle2').close();
-  // const folderCircle3 = gui.addFolder('Circle3').close();
-  folderCircle1
-    .add(params1, 'r', 1, 1000)
-    .onChange((value) => {
-      circle1.setAttribute('r', value);
-    })
-    .name('r');
-  folderCircle1
-    .add(params1, 'cx', 1, 1000)
-    .onChange((value) => {
-      circle1.setAttribute('cx', value);
-    })
-    .name('cx');
-  folderCircle1
-    .add(params1, 'cy', 1, 1000)
-    .onChange((value) => {
-      circle1.setAttribute('cy', value);
-    })
-    .name('cy');
+<script>
+  import { createScene } from '../components/Scene';
 
-  // folderCircle2
-  //   .add(params2, 'r', 1, 1000)
-  //   .onChange((value) => {
-  //     circle2.setAttribute('r', value);
-  //   })
-  //   .name('r');
-  // folderCircle2
-  //   .add(params2, 'cx', 1, 1000)
-  //   .onChange((value) => {
-  //     circle2.setAttribute('cx', value);
-  //   })
-  //   .name('cx');
-  // folderCircle2
-  //   .add(params2, 'cy', 1, 1000)
-  //   .onChange((value) => {
-  //     circle2.setAttribute('cy', value);
-  //   })
-  //   .name('cy');
-
-  // folderCircle3
-  //   .add(params3, 'r', 1, 1000)
-  //   .onChange((value) => {
-  //     circle3.setAttribute('r', value);
-  //   })
-  //   .name('r');
-  // folderCircle3
-  //   .add(params3, 'cx', 1, 1000)
-  //   .onChange((value) => {
-  //     circle3.setAttribute('cx', value);
-  //   })
-  //   .name('cx');
-  // folderCircle3
-  //   .add(params3, 'cy', 1, 1000)
-  //   .onChange((value) => {
-  //     circle3.setAttribute('cy', value);
-  //   })
-  //   .name('cy');
+  window.addEventListener('load', () => {
+    createScene();
+  });
 </script>
