@@ -1,0 +1,28 @@
+---
+import { projects } from '../data/projects.json';
+---
+
+<section
+  class="px-10 my-16 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4"
+>
+  {
+    projects.map((project) => (
+      <div class="border backdrop-blur-sm bg-white/20 rounded-md aspect-square flex flex-col items-center justify-center p-8">
+        <div class="w-full h-[60%]">
+          <img
+            class="w-full h-full"
+            src={project.image}
+            alt={project.title}
+          />
+        </div>
+        <a
+          class="font-inconsolata mt-5 text-sm border border-customWhite px-3 py-1 rounded-full hover:backdrop-blur-md text-nowrap"
+          href={project.link}
+          target="_blank"
+        >
+          Visit site
+        </a>
+      </div>
+    ))
+  }
+</section>
