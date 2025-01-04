@@ -1,9 +1,21 @@
 ---
+import Icon from 'astro-icon';
 import { projects } from '../data/projects.json';
 ---
 
+<div class="relative block md:hidden px-10">
+  <div
+    class="bottom-0 font-inclusive text-5xl md:text-8xl lg:text-9xl xl:text-[12rem]"
+  >
+    Work
+  </div>
+  <Icon
+    name="cube-arrow"
+    class="w-[60px] md:w-[100px] absolute right-10 bottom-0 md:bottom-0 md:right-16"
+  />
+</div>
 <section
-  class="px-10 my-16 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4"
+  class="px-10 my-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4"
 >
   {
     projects.map((project) => (
