@@ -1,56 +1,54 @@
 ---
-import { Icon } from "astro-icon";
 ---
 
-<nav class="navbar fixed w-full h-16 flex items-center">
-    <section class="navbar-content w-full m-auto flex justify-between px-3">
-        <a
-            href="/"
-            class="logo font-title text-xl font-bold orange-text"
-            >ek</a
-        >
-        <div class="social flex items-center">
-            <small>(work in progress)</small>
-            <!-- <a
-                href="/blog"
-                class="ml-4 font-bold orange-text"
-                >Blog</a
-            > -->
-            <a
-                href="https://www.linkedin.com/in/emiliano-kinderknecht/"
-                target="_blank"
-                class="w-[25px]"
-            >
-                <Icon name="linkedin" />
-            </a>
-            <a
-                href="https://www.github.com/emikinder/"
-                target="_blank"
-                class="w-[28px]"
-            >
-                <Icon name="github" />
-            </a>
-        </div>
-    </section>
+<nav class="navbar fixed w-full h-16 flex items-center backdrop-blur-lg">
+  <section
+    class="navbar-content w-full m-auto flex justify-between items-center px-3"
+  >
+    <a
+      href="/"
+      class="logo font-title text-xl font-bold"
+      >ek</a
+    >
+    <div class="social flex items-center">
+      <!-- <a
+        class="font-inconsolata text-md border border-customWhite px-3 py-1 rounded-full hover:bg-white/20 text-nowrap"
+        href="#about"
+      >
+        About
+      </a> -->
+      <a
+        class="font-inconsolata text-md border border-customWhite px-3 py-1 rounded-full hover:bg-white/20 text-nowrap"
+        href="#work"
+      >
+        Work
+      </a>
+      <a
+        class="font-inconsolata text-md border border-customWhite px-3 py-1 rounded-full hover:bg-white/20 text-nowrap"
+        href="#footer"
+      >
+        Projects
+      </a>
+    </div>
+  </section>
 </nav>
 <style>
-    .navbar {
-        background-color: #000;
-        z-index: 99;
-    }
+  .navbar {
+    z-index: 99;
+  }
 
-    .social > a {
-        margin-left: 1rem;
-    }
-    a:hover > svg {
-        fill: #faf9f6;
-    }
+  .social > a {
+    margin-left: 1rem;
+  }
+  a:hover > svg {
+    fill: #faf9f6;
+  }
 
-    .logo:hover {
-        color: #faf9f6;
-    }
+  .logo:hover {
+    color: #faf9f6;
+  }
 
-    .navbar-content {
-        max-width: 1300px;
-    }
+  .navbar-content {
+    max-width: 1400px;
+  }
 </style>

@@ -76,12 +76,13 @@ const { title } = Astro.props;
     <ViewTransitions />
   </head>
   <body class="bg-customBlack text-customWhite">
-    <!-- <Navbar /> -->
+    <Navbar />
     <slot />
   </body>
   <style is:global>
     :root {
       color-scheme: dark;
+      scroll-behavior: smooth;
     }
 
     .center-class {

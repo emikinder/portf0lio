@@ -54,7 +54,7 @@ export function createScene() {
   controls.enablePan = false;
   controls.enableDamping = true;
 
-  const renderer = new THREE.WebGLRenderer({ canvas });
+  const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
   renderer.setSize(sizes.width, sizes.height);
   renderer.setClearColor(0x161616);
 
@@ -134,7 +134,7 @@ export function createScene() {
       camera.position.copy(objectPosition).add(cameraOffset);
       camera.lookAt(objectPosition);
     }
-    
+
     requestAnimationFrame(animate);
 
     group1.rotation.x -= 0.003;
