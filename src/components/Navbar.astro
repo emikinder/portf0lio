@@ -2,39 +2,30 @@
 
 ---
 
-<nav class="navbar fixed w-full h-16 flex items-center backdrop-blur-lg">
-  <section
-    class="navbar-content w-full m-auto flex justify-between items-center px-3"
+<nav
+  class="navbar fixed w-full h-16 flex justify-between items-center backdrop-blur-lg px-3 sm:px-10"
+>
+  <a
+    href="/"
+    class="underline-animation font-title text-xl"
+    >emi kinder</a
   >
+  <div class="flex font-inconsolata text-lg text-nowrap gap-3">
     <a
-      href="/"
-      class="underline-animation font-title text-xl"
-      >emi kinder</a
+      href="/#work"
+      class="underline-animation"
+      >Work</a
     >
-    <div class="social flex items-center font-inconsolata text-lg text-nowrap">
-      <a
-        href="/#work"
-        class="underline-animation"
-        >Work</a
-      >
-      <a
-        href="/lab"
-        class="underline-animation"
-        >Lab</a
-      >
-    </div>
-  </section>
+    <a
+      href="/lab"
+      class="underline-animation"
+      >Lab</a
+    >
+  </div>
 </nav>
 <style>
   .navbar {
     z-index: 99;
-  }
-
-  .social > a {
-    margin-left: 1rem;
-  }
-  a:hover > svg {
-    fill: #faf9f6;
   }
 
   .underline-animation {
@@ -64,6 +55,6 @@
   }
 
   .navbar-content {
-    max-width: 1400px;
+    max-width: 1330px;
   }
 </style>
