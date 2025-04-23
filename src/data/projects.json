@@ -7,17 +7,18 @@
       "description": "Website for software company",
       "link": "https://notsociety.com/",
       "techs": ["Astro", "React", "Contentful"],
-      "image": "notso.svg"
+      "image": "notso.svg",
+      "active": true
     },
     {
-      "title": "Marene Raccolta",
-      "subtitle": "Garbage collection service.",
+      "title": "Opel",
+      "subtitle": "Automotive widget.",
       "year": "2024",
-      "description": "Web app. Garbage collection schedule, service information and notices.",
-      "link": "https://marene-raccolta.vercel.app/",
-      "github": "https://github.com/emikinder/marene-raccolta-rifiuti",
-      "techs": ["Vite", "React", "Typescript", "Firebase"],
-      "image": "marene.svg"
+      "description": "Widget for car configurator.",
+      "link": "https://www.opel.it/veicoli/frontera/frontera/overview.html",
+      "techs": ["HTML", "CSS", "Typescript", "React", "Vite", "Redux"],
+      "image": "opel-2.svg",
+      "active": true
     },
     {
       "title": "Sares",
@@ -26,7 +27,8 @@
       "description": "NFT art gallery website for a digital artist. Minimalist. Clean. Simple.",
       "link": "https://sares-web.netlify.app/",
       "techs": ["Astro", "React", "Contentful"],
-      "image": "sares.svg"
+      "image": "sares.svg",
+      "active": true
     },
     {
       "title": "Artssec",
@@ -35,7 +37,8 @@
       "description": "Institutional website. Representing the company's values and services.",
       "link": "https://artssec.netlify.app/",
       "techs": ["Gastby", "Contentful", "GraphQL"],
-      "image": "artssec.svg"
+      "image": "artssec.svg",
+      "active": true
     },
     {
       "title": "Raccoly",
@@ -45,7 +48,8 @@
       "link": "https://raccoly.com/",
       "github": "https://github.com/emikinder/ticketvibe",
       "techs": ["Nextjs", "Vite", "TailwindCSS"],
-      "image": "raccoly.svg"
+      "image": "raccoly.svg",
+      "active": true
     },
     {
       "title": "Mesh Identity",
@@ -54,7 +58,19 @@
       "description": "Landing page for a B2B identity management platform.",
       "link": "https://meshverify.com/",
       "techs": ["HTML", "CSS", "Javascript"],
-      "image": "mesh.svg"
+      "image": "mesh.svg",
+      "active": true
+    },
+    {
+      "title": "Marene Raccolta",
+      "subtitle": "Garbage collection service.",
+      "year": "2024",
+      "description": "Web app. Garbage collection schedule, service information and notices.",
+      "link": "https://marene-raccolta.vercel.app/",
+      "github": "https://github.com/emikinder/marene-raccolta-rifiuti",
+      "techs": ["Vite", "React", "Typescript", "Firebase"],
+      "image": "marene.svg",
+      "active": false
     }
   ]
 }
