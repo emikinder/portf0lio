@@ -1,4 +1,5 @@
 ---
+
 ---
 
 <nav class="navbar fixed w-full h-16 flex items-center backdrop-blur-lg">
@@ -7,28 +8,20 @@
   >
     <a
       href="/"
-      class="logo font-title text-xl font-bold"
-      >ek</a
+      class="underline-animation font-title text-xl"
+      >emi kinder</a
     >
-    <div class="social flex items-center">
-      <!-- <a
-        class="font-inconsolata text-md border border-customWhite px-3 py-1 rounded-full hover:bg-white/20 text-nowrap"
-        href="#about"
-      >
-        About
-      </a> -->
+    <div class="social flex items-center font-inconsolata text-lg text-nowrap">
       <a
-        class="font-inconsolata text-md border border-customWhite px-3 py-1 rounded-full hover:bg-white/20 text-nowrap"
-        href="#work"
+        href="/#work"
+        class="underline-animation"
+        >Work</a
       >
-        Work
-      </a>
       <a
-        class="font-inconsolata text-md border border-customWhite px-3 py-1 rounded-full hover:bg-white/20 text-nowrap"
-        href="#footer"
+        href="/lab"
+        class="underline-animation"
+        >Lab</a
       >
-        Projects
-      </a>
     </div>
   </section>
 </nav>
@@ -44,8 +37,30 @@
     fill: #faf9f6;
   }
 
-  .logo:hover {
-    color: #faf9f6;
+  .underline-animation {
+    position: relative;
+  }
+
+  .underline-animation::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: currentColor;
+    transition: width 0.3s ease;
+  }
+
+  .underline-animation:hover::after {
+    width: 100%;
+  }
+
+  .underline-animation:not(:hover)::after {
+    right: 0;
+    left: auto;
+    width: 0;
+    transition: width 0.3s ease;
   }
 
   .navbar-content {
