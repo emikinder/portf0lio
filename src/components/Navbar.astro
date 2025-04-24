@@ -8,50 +8,29 @@
   <a
     href="/"
     class="underline-animation font-title text-xl"
-    >emi kinder</a
-  >
+    >emi kinder
+  </a>
   <div class="flex font-inconsolata text-lg text-nowrap gap-3">
     <a
       href="/#work"
       class="underline-animation"
-      >Work</a
+      >work</a
+    >
+    <a
+      href="/about"
+      class="underline-animation"
+      >about</a
     >
     <a
       href="/lab"
       class="underline-animation"
-      >Lab</a
+      >lab</a
     >
   </div>
 </nav>
 <style>
   .navbar {
     z-index: 99;
-  }
-
-  .underline-animation {
-    position: relative;
-  }
-
-  .underline-animation::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: currentColor;
-    transition: width 0.3s ease;
-  }
-
-  .underline-animation:hover::after {
-    width: 100%;
-  }
-
-  .underline-animation:not(:hover)::after {
-    right: 0;
-    left: auto;
-    width: 0;
-    transition: width 0.3s ease;
   }
 
   .navbar-content {

@@ -78,11 +78,40 @@ const { title } = Astro.props;
   <body class="bg-customBlack text-customWhite">
     <Navbar />
     <slot />
-  </body>
-  <style is:global>
+  </body><style is:global>
     :root {
       color-scheme: dark;
       scroll-behavior: smooth;
+    }
+
+    .custom-padding {
+      @apply pl-4 sm:pl-16;
+    }
+
+    .underline-animation {
+      position: relative;
+    }
+
+    .underline-animation::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: currentColor;
+      transition: width 0.3s ease;
+    }
+
+    .underline-animation:hover::after {
+      width: 100%;
+    }
+
+    .underline-animation:not(:hover)::after {
+      right: 0;
+      left: auto;
+      width: 0;
+      transition: width 0.3s ease;
     }
 
     .center-class {
@@ -118,7 +147,7 @@ const { title } = Astro.props;
     h5 {
       font-family: 'Inconsolata Variable', sans-serif;
       font-style: normal;
-      font-size: 25px;
+      font-size: 20px;
     }
 
     h6 {
