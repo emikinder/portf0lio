@@ -65,7 +65,7 @@
       "title": "Marene Raccolta",
       "subtitle": "Garbage collection service.",
       "year": "2024",
-      "description": "Trash collection schedule, service information and notices.",
+      "description": "Trash collection schedule.",
       "link": "https://marene-raccolta.vercel.app/",
       "github": "https://github.com/emikinder/marene-raccolta-rifiuti",
       "techs": ["React", "Typescript", "Vite", "Firebase"],
