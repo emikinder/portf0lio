@@ -84,6 +84,10 @@ const { title } = Astro.props;
       scroll-behavior: smooth;
     }
 
+    body {
+      /* cursor: none; */
+    }
+
     .custom-padding {
       @apply pl-4 sm:pl-16;
     }
@@ -167,5 +171,51 @@ const { title } = Astro.props;
     .h-100vh {
       height: 100svh;
     }
+
+    .custom-cursor {
+      position: fixed;
+      width: 10px;
+      height: 10px;
+      border: 1px solid white;
+      border-radius: 50%;
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      z-index: 9999;
+      transition: transform 0.3s ease;
+      mix-blend-mode: difference;
+    }
+
+    .cursor-enlarge {
+      transform: translate(-50%, -50%) scale(2.5);
+    }
+
+    body {
+      cursor: none;
+    }
   </style>
 </html>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const cursor = document.createElement('div');
+    cursor.classList.add('custom-cursor');
+    document.body.appendChild(cursor);
+
+    document.addEventListener('mousemove', (e) => {
+      cursor.style.left = e.clientX + 'px';
+      cursor.style.top = e.clientY + 'px';
+    });
+
+    // Add event listeners to project links
+    const projectLinks = document.querySelectorAll('.big-cursor');
+
+    projectLinks.forEach((link) => {
+      link.addEventListener('mouseenter', () => {
+        cursor.classList.add('cursor-enlarge');
+      });
+
+      link.addEventListener('mouseleave', () => {
+        cursor.classList.remove('cursor-enlarge');
+      });
+    });
+  });
+</script>

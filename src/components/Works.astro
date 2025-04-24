@@ -22,38 +22,34 @@ import { projects } from '../data/projects.json';
           <a
             href={project.link}
             target="_blank"
-            class="border-t border-customWhite flex-1 sm:px-16 project-card relative overflow-hidden group"
+            class="flex flex-col justify-center custom-padding cursor-none big-cursor border-t last:border-b text-customWhite border-customWhite flex-1 sm:px-16 project-card relative overflow-hidden group"
           >
-            <div
+            <div class="project-hover-bg absolute inset-0 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out bg-customWhite" />
+            <div class="relative z-10 font-inconsolata text-md text-nowrap group-hover:text-customBlack group-hover:delay-100">
+              <div>
+                <p>{project.title}</p>
+                <small class="text-xs leading-3">{project.description}</small>
+              </div>
+              <div class="flex">
+                {project.techs.map((tech) => (
+                  <div class="w-fit text-xs text-customBlack group-hover:text-customWhite bg-customWhite group-hover:delay-100 group-hover:bg-customBlack px-2 rounded-full mr-2">
+                    {tech}
+                  </div>
+                ))}
+              </div>
+            </div>
+            {/* <div
               class="project-hover-image absolute top-0 bottom-0 right-0 w-[60%] opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out"
               style={`background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.1) 100%), 
               url('${project.image}') no-repeat center right; background-size: cover;`}
             />
-            <p class="font-inconsolata mt-5 text-md text-nowrap relative z-10">
-              {project.title}
+            <div class="font-inconsolata mt-5 text-md text-nowrap relative z-10">
+              <p>{project.title}</p>
               <span class="text-customWhite text-xs">
                 {project.description}
               </span>
-            </p>
+            </div> */}
           </a>
-          // <div class="border-t border-customWhite flex-1 sm:px-16 project-card relative overflow-hidden group">
-          //   <div class="project-hover-bg absolute inset-0 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out bg-slate-500" />
-          //   <div class="relative z-10">
-          //     <p class="font-inconsolata mt-5 text-md text-nowrap">
-          //       {project.title}
-          //       <span class="text-customWhite text-xs">
-          //         {project.description}
-          //       </span>
-          //     </p>
-          //     <a
-          //       href={project.link}
-          //       target="_blank"
-          //       class="px-4 py-2 inline-block mt-2 border border-customWhite/30 hover:border-customWhite rounded-md transition-all duration-300"
-          //     >
-          //       Open
-          //     </a>
-          //   </div>
-          // </div>
         ))
     }
   </section>

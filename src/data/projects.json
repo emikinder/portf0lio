@@ -2,9 +2,9 @@
   "projects": [
     {
       "title": "NotSociety",
-      "subtitle": "Tech House webpage",
+      "subtitle": "Website for software company.",
       "year": "2023",
-      "description": "Website for software company",
+      "description": "Tech House webpage.",
       "link": "https://notsociety.com/",
       "techs": ["Astro", "React", "Contentful"],
       "image": "notso.svg",
@@ -14,9 +14,9 @@
       "title": "Opel",
       "subtitle": "Automotive widget.",
       "year": "2024",
-      "description": "Widget for car configurator.",
+      "description": "Car configurator widget.",
       "link": "https://www.opel.it/veicoli/frontera/frontera/overview.html",
-      "techs": ["HTML", "CSS", "Typescript", "React", "Vite", "Redux"],
+      "techs": ["React", "Typescript", "Vite", "Redux"],
       "image": "opel-2.svg",
       "active": true
     },
@@ -24,7 +24,7 @@
       "title": "Sares",
       "subtitle": "Digital art.",
       "year": "2023",
-      "description": "NFT art gallery website for a digital artist. Minimalist. Clean. Simple.",
+      "description": "NFT art gallery website. Minimalist. Clean. Simple.",
       "link": "https://sares-web.netlify.app/",
       "techs": ["Astro", "React", "Contentful"],
       "image": "sares.svg",
@@ -34,7 +34,7 @@
       "title": "Artssec",
       "subtitle": "Security company.",
       "year": "2022",
-      "description": "Institutional website. Representing the company's values and services.",
+      "description": "Institutional website.",
       "link": "https://artssec.netlify.app/",
       "techs": ["Gastby", "Contentful", "GraphQL"],
       "image": "artssec.svg",
@@ -47,7 +47,7 @@
       "description": "Saas",
       "link": "https://raccoly.com/",
       "github": "https://github.com/emikinder/ticketvibe",
-      "techs": ["Nextjs", "Vite", "TailwindCSS"],
+      "techs": ["Nextjs", "Typescript", "Vite", "TailwindCSS"],
       "image": "raccoly.svg",
       "active": true
     },
@@ -55,7 +55,7 @@
       "title": "Mesh Identity",
       "subtitle": "Business Identity.",
       "year": "2023",
-      "description": "Landing page for a B2B identity management platform.",
+      "description": "B2B identity management platform website.",
       "link": "https://meshverify.com/",
       "techs": ["HTML", "CSS", "Javascript"],
       "image": "mesh.svg",
@@ -65,12 +65,12 @@
       "title": "Marene Raccolta",
       "subtitle": "Garbage collection service.",
       "year": "2024",
-      "description": "Web app. Garbage collection schedule, service information and notices.",
+      "description": "Trash collection schedule, service information and notices.",
       "link": "https://marene-raccolta.vercel.app/",
       "github": "https://github.com/emikinder/marene-raccolta-rifiuti",
-      "techs": ["Vite", "React", "Typescript", "Firebase"],
+      "techs": ["React", "Typescript", "Vite", "Firebase"],
       "image": "marene.svg",
-      "active": false
+      "active": true
     }
   ]
 }
