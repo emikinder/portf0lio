@@ -2,7 +2,7 @@ import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import { Timer } from 'three/addons/misc/Timer.js';
 
-export function createScene() {
+export default function createScene() {
   const canvasSection = document.querySelector('#canvas-section');
   const canvas = document.querySelector('canvas');
   canvas.width = canvasSection.clientWidth;

@@ -21,9 +21,9 @@ import { projects } from '../data/projects.json';
           <a
             href={project.link}
             target="_blank"
-            class="hidden lg:flex flex-col justify-center custom-padding cursor-pointer border-t text-customWhite border-customWhite flex-1 sm:px-16 project-card relative overflow-hidden group"
+            class="hidden lg:flex flex-col justify-center custom-padding cursor-pointer border-t text-customWhite border-customWhite flex-1 sm:px-16 relative overflow-hidden group"
           >
-            <div class="project-hover-bg absolute inset-0 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out bg-customWhite" />
+            <div class="absolute inset-0 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out bg-customWhite" />
             <div class="relative z-10 font-inconsolata text-md text-nowrap group-hover:text-customBlack group-hover:delay-100">
               <div class="flex flex-col">
                 <p>{project.title}</p>
@@ -39,9 +39,9 @@ import { projects } from '../data/projects.json';
             </div>
           </a>
           <div
-            class="py-3 flex lg:hidden flex-col custom-padding cursor-pointer border-t text-customWhite border-customWhite sm:px-16 project-card relative overflow-hidden group"
+            class="py-3 flex lg:hidden flex-col custom-padding cursor-pointer border-t text-customWhite border-customWhite sm:px-16 relative overflow-hidden group"
           >
-            <div class="project-hover-bg absolute inset-0 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out bg-customWhite" />
+            <div class="absolute inset-0 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out bg-customWhite" />
             <div class="flex justify-between pr-3 relative z-10 font-inconsolata text-md text-nowrap group-hover:text-customBlack">
               <div class="flex flex-col">
                 <p>{project.title}</p>
@@ -71,25 +71,13 @@ import { projects } from '../data/projects.json';
   </section>
 </section>
 <style>
-  .project-card {
+  /* .project-card {
     position: relative;
     transition: all 0.3s ease;
   }
 
   .project-hover-bg {
-    /* background: linear-gradient(
-      90deg,
-      rgba(59, 130, 246, 0.1) 0%,
-      rgba(59, 130, 246, 0.2) 100%
-    ); */
-    /* background:
-      linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.1) 100%),
-      url('/photo.jpeg') no-repeat center right; */
     background-size: cover;
     z-index: 1;
-  }
-
-  /* .project-card:hover .project-hover-bg {
-    transform: translateX(0);
   } */
 </style>
