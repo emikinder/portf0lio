@@ -78,6 +78,11 @@ const { title } = Astro.props;
   <body class="bg-customBlack text-customWhite">
     <Navbar />
     <slot />
+    <div
+      id="progress-bar"
+      class="fixed bottom-0 left-0 h-1 bg-customPink z-50"
+    >
+    </div>
   </body><style is:global>
     :root {
       color-scheme: dark;
@@ -172,46 +177,16 @@ const { title } = Astro.props;
       height: 100svh;
     }
 
-    /* .custom-cursor {
-      position: fixed;
-      width: 10px;
-      height: 10px;
-      border: 1px solid white;
-      border-radius: 50%;
-      pointer-events: none;
-      transform: translate(-50%, -50%);
-      z-index: 9999;
-      transition: transform 0.3s ease;
-      mix-blend-mode: difference;
-    }
-
-    .cursor-enlarge {
-      transform: translate(-50%, -50%) scale(2.5);
-    } */
   </style>
 </html>
-<!-- <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const cursor = document.createElement('div');
-    cursor.classList.add('custom-cursor');
-    document.body.appendChild(cursor);
-
-    document.addEventListener('mousemove', (e) => {
-      cursor.style.left = e.clientX + 'px';
-      cursor.style.top = e.clientY + 'px';
-    });
-
-    // Add event listeners to project links
-    const projectLinks = document.querySelectorAll('.big-cursor');
-
-    projectLinks.forEach((link) => {
-      link.addEventListener('mouseenter', () => {
-        cursor.classList.add('cursor-enlarge');
-      });
-
-      link.addEventListener('mouseleave', () => {
-        cursor.classList.remove('cursor-enlarge');
-      });
-    });
+<script>
+  document.addEventListener('scroll', () => {
+    const scrollTop = document.documentElement.scrollTop;
+    const scrollHeight =
+      document.documentElement.scrollHeight -
+      document.documentElement.clientHeight;
+    const scrollPercentage = (scrollTop / scrollHeight) * 100;
+    document.getElementById('progress-bar').style.width =
+      scrollPercentage + '%';
   });
-</script> -->
+</script>
