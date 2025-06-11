@@ -1,0 +1,17 @@
+---
+import Back from '../../components/Back.astro';
+import Skills from '../../components/lab/Skills.astro';
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="emikinder | lab">
+  <main class="flex flex-col justify-center mx-auto w-full">
+    <section class="mt-16">
+      <div class="flex pl-14 gap-2 mb-2">
+        <Back href="/lab" />
+        <p>00-skills</p>
+      </div>
+      <Skills />
+    </section>
+  </main>
+</Layout>

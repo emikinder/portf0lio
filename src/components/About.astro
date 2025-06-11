@@ -1,89 +1,176 @@
 ---
-import { Fade } from "react-awesome-reveal";
+import Icon from 'astro-icon';
+import { Rotate } from 'react-awesome-reveal';
 ---
 
-<Fade
-    triggerOnce
-    client:load
+<section
+  class="h-[110vh] relative flex flex-col w-full items-center py-5 mt-20"
 >
-    <section
-        class="font-subtitle flex flex-col gap-3 my-3 md:my-10 text-lg text-center"
+  <Icon
+    name="l"
+    class="w-[70px] md:w-[100px] absolute left-0 top-0 md:top-0 md:left-16 -rotate-90"
+  />
+  <div
+    class="flex w-full justify-end font-inclusive px-10 text-5xl md:text-8xl lg:text-9xl xl:text-[12rem]"
+  >
+    About
+  </div>
+  <section class="parent-mobile grid md:hidden h-[80vh] mt-10">
+    <div class="border-t"></div>
+    <div class="first-row">
+      <div class="font-inclusive text-8xl flex justify-center items-center">
+        19
+      </div>
+      <div class="flex">
+        <img
+          src="/photo.png"
+          alt="Emiliano Kinderknecht"
+          class="grayscale"
+        />
+      </div>
+    </div>
+    <div class="border-b"></div>
+    <div class="5 side"></div>
+    <div class="font-inconsolata p-5 text-row flex items-center">
+      <p class="leading-4 text-sm">
+        I've been working in web development for +6 years. Going through
+        companies from different sectors and technologies. Now my focus is on
+        javascript and its frameworks, like React, Next.js, Angular and Astro.
+      </p>
+    </div>
+    <div class=""></div>
+    <div class="border-b border-dashed"></div>
+    <div class="thrid-row">
+      <div
+        class="flex justify-center items-center bg-customWhite aspect-square"
+      >
+        <Icon
+          name="close-black"
+          class="w-[20px] rotate-45 text-customBlack"
+        />
+      </div>
+      <div class="font-inclusive text-8xl flex justify-center items-center">
+        25
+      </div>
+    </div>
+    <div class="border-t"></div>
+    <div class="13 side"></div>
+    <div class="font-inconsolata p-5 border-l border-dashed flex items-center">
+      <p class="leading-4 text-sm">
+        I've been working in web development for +6 years. Going through
+        companies from different sectors and technologies. Now my focus is on
+        javascript and its frameworks, like React, Next.js, Angular and Astro.
+      </p>
+    </div>
+    <div class="16 side"></div>
+  </section>
+  <!-- <section class="parent hidden md:grid w-full h-[80vh] mt-5">
+    <div class="">1</div>
+    <div class="first-row border-y border-l">
+      <div class="font-inclusive text-9xl flex justify-center items-center">
+        19
+      </div>
+      <div
+        class="flex justify-center items-center bg-customWhite aspect-square"
+      >
+        <Icon
+          name="close-black"
+          class="w-[20px] rotate-45 text-customBlack"
+        />
+      </div>
+    </div>
+    <div class="font-inconsolata p-5 flex items-center border-y">
+      <p class="leading-4 text-sm">
+        I've been working in web development for +6 years. Going through
+        companies from different sectors and technologies. Now my focus is on
+        javascript and its frameworks, like React, Next.js, Angular and Astro.
+      </p>
+    </div>
+      <img
+        src="/photo.png"
+        alt="Emiliano Kinderknecht"
+        class="grayscale object-cover gridimg"
+      />
+    <div class="">5</div>
+    <div class="">6</div>
+    <div class="font-inconsolata p-5 flex items-center border-r">
+      <p class="leading-4 text-sm">
+        I've been working in web development for +6 years. Going through
+        companies from different sectors and technologies. Now my focus is on
+        javascript and its frameworks, like React, Next.js, Angular and Astro.
+      </p>
+    </div>
+    <div class="font-inclusive text-9xl flex justify-center items-center">
+      25
+    </div>
+    <div class="">9</div>
+    <div class="both-b">10</div>
+    <div
+      class="work font-inclusive text-5xl md:text-8xl lg:text-9xl xl:text-[10rem] flex justify-center items-center"
     >
-        <section class="text-left grid md:grid-cols-2 gap-5">
-            <div class="about w-full md:pr-10 my-auto">
-                <p>
-                    I'm <strong>passionate</strong> about creating beautiful and
-                    functional user interfaces that provide a great user
-                    experience.
-                </p>
-                <br />
-                <p>
-                    I've been working in web development for <strong
-                        >+6 years</strong
-                    >. Going through companies from different sectors and
-                    technologies. Now my focus is on javascript and its
-                    frameworks, like <strong>React</strong>, <strong
-                        >Next.js</strong
-                    >, <strong>Angular</strong> and <strong>Astro</strong>.
-                </p>
-                <br />
-                <p>
-                    In my free time, I enjoy learning about new frontend
-                    technologies, and building web apps and sites. I also enjoy
-                    playing <i>fútbol</i>, videogames and spending time
-                    outdoors, drinking mate <strong>obviously</strong> 🧉🇦🇷.
-                </p>
-            </div>
-
-            <img
-                src="/images/profile1.jpeg"
-                alt="emikinder"
-                width="400"
-                class="m-auto rounded-2xl hidden md:block"
-            />
-            <img
-                src="/images/profile1-m.jpeg"
-                alt="emikinder"
-                width="400"
-                class="m-auto rounded-2xl block md:hidden"
-            />
-        </section>
-    </section>
-</Fade>
-<Fade
-    triggerOnce
-    direction="up"
-    client:load
->
-    <p class="font-title pixel text-center text-4xl my-10 md:text-6xl md:my-20">
-        Pixel perfect. <br class="inline-block md:hidden" /> Responsive design.
-    </p>
-</Fade>
-
+      Work
+    </div>
+    <div class="border-b border-dashed">12</div>
+    <div class="border-b border-dashed">13</div>
+    <div class="">14</div>
+  </section> -->
+</section>
 <style>
-    .pixel {
-        color: #faf9f6;
-    }
+  .numero {
+    border-left: 1px dashed #fff;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+  }
 
-    .about p {
-        color: #aaaaaa;
-        font-size: 1.5rem;
-        line-height: 2rem;
-    }
+  .parent-mobile {
+    grid-template-areas: '. numerophoto .' '. texto .' '. masnumero2 .' '. texto2 .';
+    grid-template-rows: 1fr 1.2fr 1fr 1.2fr;
+    grid-template-columns: 6% 1fr 6%;
+  }
 
-    @media screen and (max-width: 768px) {
-        .about p {
-            font-size: 1.1rem;
-            line-height: 1.7rem;
-        }
+  .parent {
+    grid-template-areas: '. numico text photo .' '. texto num photo .' '. work . . .';
+    /* grid-template-rows: 1fr 1fr 1fr; */
+    grid-template-columns: 6% 2fr 1fr 2fr 6%;
+    grid-auto-rows: 1fr;
+  }
 
-        .pixel {
-            letter-spacing: -1.5px;
-        }
-    }
+  .gridimg {
+    grid-area: photo;
+  }
+  .first-row {
+    display: grid;
+    grid-template-columns: 55% auto;
+    border-left: 1px dashed #fff;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+  }
 
-    i,
-    strong {
-        color: #faf9f6;
-    }
+  .text-row {
+    border-left: 1px dashed #fff;
+    border-right: 1px solid #fff;
+  }
+
+  .thrid-row {
+    display: grid;
+    grid-template-columns: auto 55%;
+    border-top: 1px solid #fff;
+    border-bottom: 1px dashed #fff;
+    border-right: 1px solid #fff;
+  }
+
+  .work {
+    border-top: 1px solid #fff;
+    border-bottom: 1px dashed #fff;
+    border-right: 1px dashed #fff;
+  }
+
+  .arrowcell {
+    border-left: 1px dashed #fff;
+  }
+
+  .both-b {
+    border-bottom: 1px dashed #fff;
+    border-top: 1px solid #fff;
+  }
 </style>

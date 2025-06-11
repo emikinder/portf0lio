@@ -1,0 +1,20 @@
+---
+import Back from '../../components/Back.astro';
+import Waves from '../../components/lab/Waves.astro';
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="emikinder | lab">
+  <main class="flex flex-col mx-auto w-full">
+    <div class="absolute top-16 flex pl-14 gap-2 mb-2">
+      <Back href="/lab" />
+      <p>01-waves</p>
+    </div>
+    <p
+      class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+    >
+      move the cursor
+    </p>
+    <Waves />
+  </main>
+</Layout>

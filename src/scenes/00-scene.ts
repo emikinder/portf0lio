@@ -2,7 +2,7 @@ import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import { Timer } from 'three/addons/misc/Timer.js';
 
-export function createScene() {
+export default function createScene() {
   const canvasSection = document.querySelector('#canvas-section');
   const canvas = document.querySelector('canvas');
   canvas.width = canvasSection.clientWidth;
@@ -54,7 +54,7 @@ export function createScene() {
   controls.enablePan = false;
   controls.enableDamping = true;
 
-  const renderer = new THREE.WebGLRenderer({ canvas });
+  const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
   renderer.setSize(sizes.width, sizes.height);
   renderer.setClearColor(0x161616);
 
@@ -134,7 +134,7 @@ export function createScene() {
       camera.position.copy(objectPosition).add(cameraOffset);
       camera.lookAt(objectPosition);
     }
-    
+
     requestAnimationFrame(animate);
 
     group1.rotation.x -= 0.003;

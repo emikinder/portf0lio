@@ -62,7 +62,7 @@ const { title } = Astro.props;
     />
     <meta
       property="og:title"
-      content="emikinder | dev"
+      content="emi kinder | dev"
     />
     <meta
       property="og:description"
@@ -76,12 +76,51 @@ const { title } = Astro.props;
     <ViewTransitions />
   </head>
   <body class="bg-customBlack text-customWhite">
-    <!-- <Navbar /> -->
+    <Navbar />
     <slot />
-  </body>
-  <style is:global>
+    <div
+      id="progress-bar"
+      class="fixed bottom-0 left-0 h-1 bg-customPink z-50"
+    >
+    </div>
+  </body><style is:global>
     :root {
       color-scheme: dark;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      /* cursor: none; */
+    }
+
+    .custom-padding {
+      @apply pl-4 sm:pl-16;
+    }
+
+    .underline-animation {
+      position: relative;
+    }
+
+    .underline-animation::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: currentColor;
+      transition: width 0.3s ease;
+    }
+
+    .underline-animation:hover::after {
+      width: 100%;
+    }
+
+    .underline-animation:not(:hover)::after {
+      right: 0;
+      left: auto;
+      width: 0;
+      transition: width 0.3s ease;
     }
 
     .center-class {
@@ -117,7 +156,7 @@ const { title } = Astro.props;
     h5 {
       font-family: 'Inconsolata Variable', sans-serif;
       font-style: normal;
-      font-size: 25px;
+      font-size: 20px;
     }
 
     h6 {
@@ -137,5 +176,17 @@ const { title } = Astro.props;
     .h-100vh {
       height: 100svh;
     }
+
   </style>
 </html>
+<script>
+  document.addEventListener('scroll', () => {
+    const scrollTop = document.documentElement.scrollTop;
+    const scrollHeight =
+      document.documentElement.scrollHeight -
+      document.documentElement.clientHeight;
+    const scrollPercentage = (scrollTop / scrollHeight) * 100;
+    document.getElementById('progress-bar').style.width =
+      scrollPercentage + '%';
+  });
+</script>

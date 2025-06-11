@@ -1,0 +1,95 @@
+---
+import Footer from '../components/Footer.astro';
+import Layout from '../layouts/Layout.astro';
+
+const techs = [
+  'JavaScript',
+  'React',
+  'Next.js',
+  'Typescript',
+  'Three.js',
+  'Astro',
+  'Tailwind CSS',
+  'Node.js',
+];
+---
+
+<Layout title="emikinder | about">
+  <main class="flex flex-col justify-center mx-auto w-full overflow-hidden">
+    <section
+      class="h-[75vh] custom-padding flex flex-col md:flex-row items-center justify-center"
+    >
+      <div class="w-full pt-10 pb-5 md:py-0 md:w-1/2">
+        <p class="font-inclusive text-4xl sm:text-4xl lg:text-5xl">
+          frontend developer
+        </p>
+        <p class="font-inclusive text-3xl sm:text-4xl lg:text-5xl">
+          & 3D web enthusiast,
+        </p>
+        <p class="font-inclusive text-3xl sm:text-4xl lg:text-5xl">
+          coding from Argentina 🇦🇷
+        </p>
+      </div>
+      <div class="w-full md:w-1/2 pr-4">
+        <img
+          src="/emk.png"
+          alt="emikinder"
+          class="w-[90%] sm:w-[80%] md:w-[70%] mx-auto grayscale"
+        />
+        <!-- <section
+          id="canvas-section"
+          class="w-full h-full"
+        >
+          <Scene
+            scene="about"
+            client:idle
+          />
+        </section> -->
+      </div>
+    </section>
+    <section
+      class="custom-padding pr-4 md:pr-16 flex flex-col md:flex-row gap-10 my-10 font-inclusive"
+    >
+      <div class="w-full md:w-1/3">
+        <p class="text-lg md:text-xl lg:text-xl mb-10">
+          Hey there! I'm a web developer with over 7 years of experience, and I
+          love crafting engaging, interactive experiences for the web.
+        </p>
+        <p class="text-lg md:text-xl lg:text-xl mb-10">
+          Throughout my journey, I've worked with companies across various
+          industries, diving into different technologies along the way.
+        </p>
+        <p class="text-lg md:text-xl lg:text-xl">
+          These days, my main focus is JavaScript and its modern frameworks,
+          especially React and Next.js.
+        </p>
+      </div>
+      <div class="w-full md:w-1/3">
+        <p class="text-lg md:text-xl lg:text-xl mb-10">
+          Beyond frontend development, I'm also really into 3D web technologies,
+          with Threejs.
+        </p>
+        <p class="text-lg md:text-xl lg:text-xl">
+          I enjoy experimenting with how 3D elements can bring interfaces to
+          life and create more immersive, dynamic user experiences.
+        </p>
+      </div>
+      <div class="flex-1 flex flex-row flex-wrap md:flex-col gap-2 items-end">
+        {
+          techs.map((tech) => (
+            <div class="w-fit text-md text-customBlack group-hover:text-customWhite bg-customWhite group-hover:delay-100 group-hover:bg-customBlack px-2 rounded-full mr-2">
+              {tech}
+            </div>
+          ))
+        }
+      </div>
+    </section>
+    <Footer />
+  </main>
+  <style>
+    #scene {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</Layout>

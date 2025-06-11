@@ -1,0 +1,27 @@
+---
+import Icon from 'astro-icon';
+import { Fade, Slide } from 'react-awesome-reveal';
+---
+
+<section
+  class="flex flex-col h-[100vh] justify-center custom-padding cursor-default"
+>
+  <Icon
+    name="l"
+    class="absolute w-[70px] md:w-[100px] left-0 top-20 md:top-20 sm:left-10 -rotate-90"
+  />
+  <p class="text-7xl sm:text-9xl lg:text-[250px]">emi <br /> kinder</p>
+  <div class="w-full text-xl sm:text-4xl lg:text-6xl font-inclusive">
+    <Slide
+      direction="left"
+      delay={70}
+      client:load
+      triggerOnce
+    >
+      <p>
+        frontend & <span>creative developer</span>
+      </p>
+    </Slide>
+    <hr />
+  </div>
+</section>
