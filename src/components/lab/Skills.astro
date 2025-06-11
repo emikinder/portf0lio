@@ -1,0 +1,77 @@
+---
+import Icon from 'astro-icon';
+import Scene from '../Scene';
+---
+
+<section
+  class="relative h-[85dvh] w-full center-class flex border border-dashed border-customWhite"
+>
+  <section
+    class="w-full h-full md:w-2/5 md:border-dashed md:border-r"
+    id="skills-section"
+  >
+    <section
+      id="0"
+      class={`flex relative items-center justify-center h-1/5 border-y border-white
+                  first:border-t-0 last:border-b-0 skill-item hover:bg-customPurple`}
+    >
+      <h5 class="font-inclusive">ReactJS</h5>
+      <Icon
+        name="circle"
+        class="absolute -right-1 -bottom-1 w-[6px] h-[6px] hidden md:block"
+      />
+    </section>
+    <section
+      id="1"
+      class={`flex relative items-center justify-center h-1/5 border-y border-white
+                  first:border-t-0 last:border-b-0 skill-item hover:bg-customGreen`}
+    >
+      <h5 class="font-inclusive">NextJS</h5>
+      <Icon
+        name="circle"
+        class="absolute -right-1 -bottom-1 w-[6px] h-[6px] hidden md:block"
+      />
+    </section>
+    <section
+      id="2"
+      class={`flex relative items-center justify-center h-1/5 border-y border-white
+                  first:border-t-0 last:border-b-0 skill-item hover:bg-customPink`}
+    >
+      <h5 class="font-inclusive">ThreeJS</h5>
+      <Icon
+        name="circle"
+        class="absolute -right-1 -bottom-1 w-[6px] h-[6px] hidden md:block"
+      />
+    </section>
+    <section
+      id="3"
+      class={`flex relative items-center justify-center h-1/5 border-y border-white
+                  first:border-t-0 last:border-b-0 skill-item hover:bg-customBlue`}
+    >
+      <h5 class="font-inclusive">React Native</h5>
+      <Icon
+        name="circle"
+        class="absolute -right-1 -bottom-1 w-[6px] h-[6px] hidden md:block"
+      />
+    </section>
+    <section
+      id="4"
+      class={`flex relative items-center justify-center h-1/5 border-y border-white
+                  first:border-t-0 last:border-b-0 skill-item hover:bg-customYellow`}
+    >
+      <h5 class="font-inclusive">Node</h5>
+    </section>
+  </section>
+  <section
+    id="canvas-section"
+    class="hidden md:block w-3/5 h-full"
+  >
+    <Scene scene='00' client:load />
+  </section>
+</section>
+<style>
+  #scene {
+    width: 100%;
+    height: 100%;
+  }
+</style>

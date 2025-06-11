@@ -1,11 +1,11 @@
 ---
-import Navbar from "../components/Navbar.astro";
-import "@fontsource-variable/open-sans";
-import "@fontsource-variable/inter";
-import "@fontsource/roboto";
-import "@fontsource-variable/rubik";
+import Navbar from '../components/Navbar.astro';
+import '@fontsource-variable/inter';
+import '@fontsource-variable/open-sans';
+import '@fontsource-variable/inconsolata';
+import '@fontsource/inclusive-sans';
 
-import { ViewTransitions } from "astro:transitions";
+import { ViewTransitions } from 'astro:transitions';
 interface Props {
   title: string;
 }
@@ -31,9 +31,8 @@ const { title } = Astro.props;
       function gtag() {
         dataLayer.push(arguments);
       }
-      gtag("js", new Date());
-
-      gtag("config", "G-PJTDK4S87B");
+      gtag('js', new Date());
+      gtag('config', 'G-PJTDK4S87B');
     </script>
     <meta charset="UTF-8" />
     <meta
@@ -63,7 +62,7 @@ const { title } = Astro.props;
     />
     <meta
       property="og:title"
-      content="emikinder | dev"
+      content="emi kinder | dev"
     />
     <meta
       property="og:description"
@@ -76,24 +75,52 @@ const { title } = Astro.props;
     <title>{title}</title>
     <ViewTransitions />
   </head>
-  <body>
+  <body class="bg-customBlack text-customWhite">
     <Navbar />
     <slot />
+    <div
+      id="progress-bar"
+      class="fixed bottom-0 left-0 h-1 bg-customPink z-50"
+    >
+    </div>
   </body><style is:global>
     :root {
       color-scheme: dark;
-    }
-    html {
-      color: #757574;
-      background-color: #000;
+      scroll-behavior: smooth;
     }
 
-    .shadow {
-      box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+    body {
+      /* cursor: none; */
     }
 
-    .orange-text {
-      color: #f39c19;
+    .custom-padding {
+      @apply pl-4 sm:pl-16;
+    }
+
+    .underline-animation {
+      position: relative;
+    }
+
+    .underline-animation::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: currentColor;
+      transition: width 0.3s ease;
+    }
+
+    .underline-animation:hover::after {
+      width: 100%;
+    }
+
+    .underline-animation:not(:hover)::after {
+      right: 0;
+      left: auto;
+      width: 0;
+      transition: width 0.3s ease;
     }
 
     .center-class {
@@ -102,57 +129,64 @@ const { title } = Astro.props;
       justify-content: center;
     }
 
-    .font-title {
-      font-family: "Inter Variable", sans-serif;
-      font-weight: 700;
-      letter-spacing: -2px;
+    h1 {
+      font-family: 'Open Sans Variable', sans-serif;
+      font-style: bold;
+      font-size: 250px;
     }
 
-    .font-subtitle {
-      font-family: "Inter Variable", sans-serif;
+    h2 {
+      font-family: 'Open Sans Variable', sans-serif;
+      font-style: bold;
+      font-size: 100px;
     }
 
-    .font-text {
-      font-family: "Inter Variable", sans-serif;
-      font-weight: 300;
+    h3 {
+      font-family: 'Open Sans Variable', sans-serif;
+      font-style: bold;
+      font-size: 70px;
     }
 
-    .hero::before {
-      --grid-color: #51575f;
-      --bg-color: #000;
-      --grid-size: 24px;
-      content: "";
-      position: absolute;
-      inset: 0;
-      background:
-        linear-gradient(
-            90deg,
-            var(--bg-color) calc(var(--grid-size) - 2px),
-            transparent 1%
-          )
-          50%,
-        linear-gradient(
-            var(--bg-color) calc(var(--grid-size) - 2px),
-            transparent 1%
-          )
-          50%,
-        var(--grid-color);
-      background-position-x: center;
-      background-position-y: center;
-      background-size: var(--grid-size) var(--grid-size);
-      -webkit-mask-image: linear-gradient(0deg, transparent 5%, #000);
-      mask-image: linear-gradient(0deg, transparent 5%, #000);
+    h4 {
+      font-family: 'Open Sans Variable', sans-serif;
+      font-style: normal;
+      font-size: 40px;
     }
 
-    .blog-body h2 {
-      font-size: x-large;
-      font-family: "Inter Variable", sans-serif;
-      font-weight: 700;
+    h5 {
+      font-family: 'Inconsolata Variable', sans-serif;
+      font-style: normal;
+      font-size: 20px;
     }
 
-    .blog-body p {
-      font-size: large;
-      font-family: "Consolas", sans-serif;
+    h6 {
+      font-family: 'Inconsolata Variable', sans-serif;
+      font-style: normal;
+      font-size: 10px;
     }
+
+    .font-inconsolata {
+      font-family: 'Inconsolata Variable', sans-serif;
+    }
+
+    .font-inclusive {
+      font-family: 'Inclusive Sans', sans-serif;
+    }
+
+    .h-100vh {
+      height: 100svh;
+    }
+
   </style>
 </html>
+<script>
+  document.addEventListener('scroll', () => {
+    const scrollTop = document.documentElement.scrollTop;
+    const scrollHeight =
+      document.documentElement.scrollHeight -
+      document.documentElement.clientHeight;
+    const scrollPercentage = (scrollTop / scrollHeight) * 100;
+    document.getElementById('progress-bar').style.width =
+      scrollPercentage + '%';
+  });
+</script>
