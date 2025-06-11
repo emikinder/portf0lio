@@ -16,6 +16,12 @@ export default function Scene({ scene }: { scene: string }) {
           createScene();
         });
         break;
+      case 'about':
+        import('../scenes/about').then((module) => {
+          const createScene = module.default;
+          createScene();
+        });
+        break;
       default:
         break;
     }
