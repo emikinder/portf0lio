@@ -2,7 +2,8 @@ import { useEffect } from 'react';
 
 export default function Scene({ scene }: { scene: string }) {
   useEffect(() => {
-    console.log(scene);
+    let cleanup: (() => void) | undefined;
+
     switch (scene) {
       case '00':
         import('../scenes/00-scene').then((module) => {
@@ -16,6 +17,12 @@ export default function Scene({ scene }: { scene: string }) {
           createScene();
         });
         break;
+      case '02':
+        import('../scenes/02-scene/script.js').then((module) => {
+          const createScene = module.default;
+          cleanup = createScene();
+        });
+        break;
       case 'about':
         import('../scenes/about').then((module) => {
           const createScene = module.default;
@@ -25,6 +32,12 @@ export default function Scene({ scene }: { scene: string }) {
       default:
         break;
     }
+
+    return () => {
+      if (cleanup) {
+        cleanup();
+      }
+    };
   }, []);
 
   return (

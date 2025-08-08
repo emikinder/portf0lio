@@ -86,22 +86,26 @@ const year = new Date().getFullYear();
   }
 </style>
 <script is:inline>
-  const mail = document.getElementById('mail');
-  const copyNotification = document.getElementById('copyNotification');
+  (() => {
+    const mail = document.getElementById('mail');
+    const copyNotification = document.getElementById('copyNotification');
 
-  const handleCopy = () => {
-    navigator.clipboard.writeText('hey@emikinder.dev');
+    if (!mail || !copyNotification) return;
 
-    // Show the notification
-    copyNotification.classList.remove('opacity-0');
-    copyNotification.classList.add('opacity-100');
+    const handleCopy = () => {
+      navigator.clipboard.writeText('hey@emikinder.dev');
 
-    // Hide it after 2 seconds
-    setTimeout(() => {
-      copyNotification.classList.remove('opacity-100');
-      copyNotification.classList.add('opacity-0');
-    }, 2000);
-  };
+      // Show the notification
+      copyNotification.classList.remove('opacity-0');
+      copyNotification.classList.add('opacity-100');
 
-  mail.addEventListener('click', handleCopy);
+      // Hide it after 2 seconds
+      setTimeout(() => {
+        copyNotification.classList.remove('opacity-100');
+        copyNotification.classList.add('opacity-0');
+      }, 2000);
+    };
+
+    mail.addEventListener('click', handleCopy);
+  })();
 </script>
