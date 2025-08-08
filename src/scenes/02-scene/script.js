@@ -54,16 +54,16 @@ export default function createScene() {
   });
 
   // Textures
-  const earthDayTexture = textureLoader.load('/static/earth/day.jpg');
+  const earthDayTexture = textureLoader.load('/earth/day.jpg');
   earthDayTexture.colorSpace = THREE.SRGBColorSpace;
   earthDayTexture.anisotropy = 8;
 
-  const earthNightTexture = textureLoader.load('/static/earth/night.jpg');
+  const earthNightTexture = textureLoader.load('/earth/night.jpg');
   earthNightTexture.colorSpace = THREE.SRGBColorSpace;
   earthNightTexture.anisotropy = 8;
 
   const specularCloudsTexture = textureLoader.load(
-    '/static/earth/specularClouds.jpg'
+    '/earth/specularClouds.jpg'
   );
   specularCloudsTexture.anisotropy = 8;
 
