@@ -95,6 +95,11 @@ const year = new Date().getFullYear();
     const handleCopy = () => {
       navigator.clipboard.writeText('hey@emikinder.dev');
 
+      // Track email copy event
+      if (window.trackEvent) {
+        window.trackEvent('click', 'contact', 'email_copy', 1);
+      }
+
       // Show the notification
       copyNotification.classList.remove('opacity-0');
       copyNotification.classList.add('opacity-100');
