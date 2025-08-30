@@ -8,22 +8,26 @@
   <a
     href="/"
     class="underline-animation font-title text-xl cursor-pointer"
+    onclick="window.trackEvent && window.trackEvent('click', 'navigation', 'logo_home', 1)"
     >emi kinder
   </a>
   <div class="flex font-inconsolata text-lg text-nowrap gap-3">
     <a
       href="/#work"
       class="underline-animation"
+      onclick="window.trackEvent && window.trackEvent('click', 'navigation', 'work_section', 1)"
       >work</a
     >
     <a
       href="/#lab"
       class="underline-animation"
+      onclick="window.trackEvent && window.trackEvent('click', 'navigation', 'lab_section', 1)"
       >lab</a
     >
     <a
       href="/about"
       class="underline-animation"
+      onclick="window.trackEvent && window.trackEvent('click', 'navigation', 'about_page', 1)"
       >about</a
     >
   </div>

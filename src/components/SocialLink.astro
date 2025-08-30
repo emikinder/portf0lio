@@ -9,6 +9,7 @@ const { href, label, icon, hoverColor } = Astro.props;
   target="_blank"
   class={`w-[25px] ${hoverColor} big-cursor cursor-pointer`}
   aria-label={label}
+  onclick={`window.trackEvent && window.trackEvent('click', 'social_media', '${label.toLowerCase()}', 1)`}
 >
   <Icon
     name={icon}
