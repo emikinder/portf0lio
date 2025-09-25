@@ -5,7 +5,7 @@ import '@fontsource-variable/open-sans';
 import '@fontsource-variable/inconsolata';
 import '@fontsource/inclusive-sans';
 
-import { ViewTransitions } from 'astro:transitions';
+import { ClientRouter } from 'astro:transitions';
 interface Props {
   title: string;
 }
@@ -35,15 +35,15 @@ const { title } = Astro.props;
       gtag('config', 'G-PJTDK4S87B', {
         send_page_view: true,
         page_title: document.title,
-        page_location: window.location.href
+        page_location: window.location.href,
       });
 
       // Función helper para enviar eventos - disponible globalmente
-      window.trackEvent = function(action, category, label, value) {
+      window.trackEvent = function (action, category, label, value) {
         gtag('event', action, {
           event_category: category,
           event_label: label,
-          value: value
+          value: value,
         });
       };
     </script>
@@ -86,7 +86,7 @@ const { title } = Astro.props;
       content="summary"
     />
     <title>{title}</title>
-    <ViewTransitions />
+    <ClientRouter />
   </head>
   <body class="bg-customBlack text-customWhite">
     <Navbar />
@@ -189,7 +189,6 @@ const { title } = Astro.props;
     .h-100vh {
       height: 100svh;
     }
-
   </style>
 </html>
 <script>
@@ -208,12 +207,20 @@ const { title } = Astro.props;
     // Track scroll depth
     let maxScrollDepth = 0;
     const trackScrollDepth = () => {
-      const scrollDepth = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+      const scrollDepth = Math.round(
+        (window.scrollY / (document.body.scrollHeight - window.innerHeight)) *
+          100
+      );
       if (scrollDepth > maxScrollDepth && scrollDepth <= 100) {
         maxScrollDepth = scrollDepth;
         // Track every 25% of scroll
         if (scrollDepth % 25 === 0 && window.trackEvent) {
-          window.trackEvent('scroll', 'page_depth', `${scrollDepth}%`, scrollDepth);
+          window.trackEvent(
+            'scroll',
+            'page_depth',
+            `${scrollDepth}%`,
+            scrollDepth
+          );
         }
       }
     };
@@ -224,8 +231,14 @@ const { title } = Astro.props;
     const startTime = Date.now();
     window.addEventListener('beforeunload', () => {
       const timeOnPage = Math.round((Date.now() - startTime) / 1000);
-      if (window.trackEvent && timeOnPage > 5) { // Only track if more than 5 seconds
-        window.trackEvent('engagement', 'time_on_page', document.title, timeOnPage);
+      if (window.trackEvent && timeOnPage > 5) {
+        // Only track if more than 5 seconds
+        window.trackEvent(
+          'engagement',
+          'time_on_page',
+          document.title,
+          timeOnPage
+        );
       }
     });
   });
